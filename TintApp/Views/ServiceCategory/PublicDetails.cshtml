@@ -1,0 +1,57 @@
+﻿@model TintApp.Models.ServiceCategory
+
+<style>
+    body {
+        background-color: #f7f9fc;
+    }
+</style>
+
+
+<div class="container mt-5">
+    <!-- Category Title -->
+    <div class="text-center mb-4">
+        <h2 class="display-6 text-primary fw-bold border-bottom pb-2 d-inline-block">
+            @Model.CategoryName
+        </h2>
+    </div>
+
+    <!-- Service Item Details -->
+    <div class="row bg-white rounded shadow p-4 align-items-center">
+        @foreach (var item in Model.Items)
+        {
+            <!-- Image -->
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="position-relative overflow-hidden rounded-3">
+                    <img src="@item.PictureUrl" alt="@item.ItemName" class="img-fluid rounded" style="width:300px; height:180px;">
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="col-md-6">
+                <h3 class="fw-bold text-dark">@item.ItemName</h3>
+                <h4 class="text-success">৳@item.Price</h4>
+
+                <p class="text-muted mt-3">@item.Description</p>
+
+                <!-- Rating Example -->
+                <div class="d-flex align-items-center mb-3">
+                    <span class="me-2 text-warning">★ ★ ★ ★ ☆</span>
+                    <small class="text-muted">4.2 (120 Reviews)</small>
+                </div>
+
+                <!-- Book Button -->
+                @* <a href="#" class="btn btn-primary btn-lg mt-3 px-4 rounded-pill shadow-sm mb-4">
+                    Book Now
+                </a> *@
+                <a asp-action="Create" asp-controller="Booking" class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4" >Book Now</a>
+
+
+
+            </div>
+        }
+    </div>
+
+
+</div>
+
+

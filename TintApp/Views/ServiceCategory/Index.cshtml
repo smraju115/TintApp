@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ServiceCategory>
+@{
+    ViewData["Title"] = "Service Categories";
+    ViewBag.PagePaddingClass = "p-5 m-5";
+}
+
+<h2>All Categories</h2>
+<a class="btn btn-primary" asp-action="Create">+ Add New Category</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Total Services</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.CategoryName</td>
+                <td>@c.Title</td>
+                <td>
+                    <a asp-controller="ServiceCategory" asp-action="Details" asp-route-id="@c.Id" class="btn btn-primary btn-sm position-relative">
+                        View Details
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            @(c.Items?.Count ?? 0)
+                       </span>
+                    </a>
+                    
+
+                </td>
+                <td>
+                    <a asp-controller="ServiceItem" asp-action="Create" asp-route-id="@c.Id" class="btn btn-success btn-sm">+ Add Item</a>
+                    <a asp-action="Delete" asp-route-id="@c.Id" class="btn btn-danger btn-sm" onclick="return confirm('Delete this category?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

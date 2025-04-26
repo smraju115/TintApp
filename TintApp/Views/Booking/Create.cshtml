@@ -1,0 +1,122 @@
+﻿@model Booking
+
+@{
+    ViewData["Title"] = "Create Booking";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" method="post">
+            <h2>Create a Booking</h2>
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success position-relative" role="alert">
+                    <h4 class="alert-heading">Success!</h4>
+                    <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <p>@TempData["SuccessMessage"]</p>
+                    <a href="@TempData["PdfUrl"]" class="btn btn-success" target="_blank">Download Receipt (PDF)</a>
+                </div>
+            }
+            else if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger position-relative" role="alert">
+                    <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <p>@TempData["ErrorMessage"]</p>
+                </div>
+            }
+
+            <div class="form-group mt-2">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="BookingDate" class="control-label"></label>
+                <input asp-for="BookingDate" class="form-control" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                <span asp-validation-for="BookingDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="ServiceCategoryId" class="control-label"></label>
+                <select asp-for="ServiceCategoryId" class="form-control" asp-items="ViewBag.ServiceCategories" onchange="loadServiceItems()">
+                    <option value="">Select Category</option>
+                </select>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="ServiceItemId" class="control-label"></label>
+                <select asp-for="ServiceItemId" id="serviceItems" class="form-control" onchange="updatePriceField()">
+                    <option value="">Select Service Item</option>
+                </select>
+            </div>
+
+            <div class="form-group mt-2">
+                <label>Price</label>
+                <input id="serviceItemPrice" class="form-control" readonly />
+                <input type="hidden" asp-for="Price" />
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="CustomerMobile" class="control-label"></label>
+                <input asp-for="CustomerMobile" class="form-control" type="number" />
+                <span asp-validation-for="CustomerMobile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" />
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="CarModel" class="control-label"></label>
+                <input asp-for="CarModel" class="form-control" />
+                <span asp-validation-for="CarModel" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="CarNumberPlate" class="control-label"></label>
+                <input asp-for="CarNumberPlate" class="form-control" />
+                <span asp-validation-for="CarNumberPlate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="CustomerMessage" class="control-label"></label>
+                <input asp-for="CustomerMessage" class="form-control" />
+                <span asp-validation-for="CustomerMessage" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary">Save Booking</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function loadServiceItems() {
+            var categoryId = document.querySelector('[name="ServiceCategoryId"]').value;
+            $.get('@Url.Action("GetServiceItems", "Booking")', { categoryId: categoryId }, function (data) {
+                var items = $('#serviceItems');
+                items.empty().append('<option value="">Select Item</option>');
+                data.forEach(function (item) {
+                    items.append(`<option value="${item.id}" data-price="${item.price}">${item.itemName}</option>`);
+                });
+            });
+        }
+
+        function updatePriceField() {
+            var selected = $('#serviceItems option:selected');
+            var price = selected.data('price');
+            $('#serviceItemPrice').val(price);
+            $('[name="Price"]').val(price);
+        }
+    </script>
+}
+

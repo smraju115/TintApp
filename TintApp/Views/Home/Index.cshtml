@@ -1,0 +1,510 @@
+﻿@model List<ServiceCategory>
+
+@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.ShowMasthead = true;
+
+}
+
+
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/88017XXXXXXXX" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="60" height="60" fill="#25D366">
+        <path d="M380.9 97.1C339 55.2 283.1 32 224.1 32c-58.8 0-113.9 22.9-155.8 64.8C26.5 138.6 4.7 193.5 6.1 251.7c1.2 45.7 15.1 89.6 40.4 126.6L6.3 480l105.2-38.3c35.1 19.2 74.7 29.3 113.5 29.3h.1c58.9 0 113.9-22.9 155.8-64.8 41.9-41.9 64.8-97 64.8-155.8 0-58.9-22.9-113.9-64.8-155.9zM224.1 438.6c-33.8 0-66.9-9.1-95.7-26.2l-6.8-4.1-62.4 22.7 22.1-60.7-4.4-7c-23-36.8-35.1-79.4-34.1-122.9.9-46.6 19.4-90.3 52.1-123 33-33 76.9-51.2 123.7-51.2 46.6 0 90.4 18.2 123.4 51.2s51.2 76.9 51.2 123.6c0 46.6-18.2 90.4-51.2 123.4-33 33.1-76.8 51.2-123.3 51.2zm101.5-138.4c-5.6-2.8-33.2-16.4-38.3-18.3-5.1-1.9-8.8-2.8-12.5 2.8s-14.4 18.3-17.7 22.1c-3.2 3.8-6.5 4.2-12.1 1.4-33.2-16.6-54.9-29.7-77-66.8-5.8-10 5.8-9.3 16.6-30.9 1.8-3.8.9-7.1-.5-9.9s-12.5-30-17.1-41.1c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.9 1.4-15.1 7.1c-5.1 5.6-19.7 19.3-19.7 47.1 0 27.8 20.2 54.7 23 58.5 2.8 3.8 39.7 60.6 96.4 85.4 13.5 5.8 24.1 9.3 32.4 11.9 13.6 4.3 26 3.7 35.8 2.2 10.9-1.6 33.2-13.6 37.9-26.7 4.7-13.1 4.7-24.2 3.3-26.6-1.3-2.5-5.1-3.9-10.7-6.7z" />
+    </svg>
+</a>
+
+
+
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Services</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <img class="rounded-3 mb-2" src="assets/img/portfolio/Reduced-Heat-Rejection.jpg" alt="Generic placeholder image" width="80%">
+                    <h4 class="mb-0">Vehicle Window Tinting</h4>
+                    <p>Exceptional Optical Clarity & Superior Glare Reduction</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-4">
+                    <img class="rounded-3 mb-2" src="assets/img/portfolio/Full-Car-Nano-Ceramic-Coating-Coating-kereta.jpg" alt="Generic placeholder image" width="80%">                  
+                    <h4 class="mb-0">Nano Ceramic Coating</h4>
+                    <p>Expert Car Coating Application</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-4">
+                    <img class="rounded-3 mb-2" src="assets/img/portfolio/Self-Healing-ppf-in-kuala-lumpur-selangor-malaysia.jpg" alt="Generic placeholder image" width="80%">
+                    <h4 class="mb-0">Paint Protection Film (PPF)</h4>
+                    <p>Protect Your Car's Paint from Everyday Wear & Tear</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-4">
+                    <img class="rounded-3 mb-2" src="assets/img/portfolio/Expert-Design-Installation-of-car-wrapping-by-kl-tint-studio.jpg" alt="Generic placeholder image" width="80%">                    
+                    <h4 class="mb-0">Car Wrapping</h4>
+                    <p>Breathe New Life into Older Vehicles</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+         </div>
+
+       @*  
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Coating</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">PPF</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="">
+                    <img  src="assets/img/portfolio/Reduced-Heat-Rejection.jpg" class="rounded-3" alt="..." />
+                   
+                </span>
+                <h4 class="my-3">Wrapping</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+        </div> *@
+    </div>
+</section>
+
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-5">Special Offers</h2>
+    <div class="row g-5">
+        @foreach (var offer in Model)
+        {
+            <div class="col-md-4">
+                <div class="offer-card">
+                    <img src="@offer.ImageUrl" alt="Offer Image" class="offer-image">
+                    <div class="offer-content">
+                        <h5 class="fw-bold">shshshsh</h5>
+                        <p class="text-muted mb-1">Valid through</p>
+                          <a asp-controller="ServiceCategory" asp-action="PublicDetails" asp-route-categoryId="@offer.Id" class="offer-button">View Details</a>
+                     </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Gallery</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 1-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/11.jpg" width="100%" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Vehicle Window Tinting</div>
+                        <div class="portfolio-caption-subheading text-muted">
+                            Exceptional Optical Clarity & Superior Glare Reduction
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 2-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/12.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">
+                            Nano Ceramic Coating
+                        </div>
+                        <div class="portfolio-caption-subheading text-muted">Expert Car Coating Application</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 3-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/13.jpg" width="100%" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading"> Paint Protection Film (PPF)</div>
+                        <div class="portfolio-caption-subheading text-muted">Protect Your Car's Paint from Everyday Wear & Tear</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                <!-- Portfolio item 4-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/14.jpg" width="100%" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Car Wrapping</div>
+                        <div class="portfolio-caption-subheading text-muted">Breathe New Life into Older Vehicles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                <!-- Portfolio item 5-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/15.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Southwest</div>
+                        <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <!-- Portfolio item 6-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/16.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Window</div>
+                        <div class="portfolio-caption-subheading text-muted">Photography</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About-->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2009-2011</h4>
+                        <h4 class="subheading">Our Humble Beginnings</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>March 2011</h4>
+                        <h4 class="subheading">An Agency is Born</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>December 2015</h4>
+                        <h4 class="subheading">Transition to Full Service</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2020</h4>
+                        <h4 class="subheading">Phase Two Expansion</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Be Part
+                        <br />
+                        Of Our
+                        <br />
+                        Story!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                    <h4>Parveen Anand</h4>
+                    <p class="text-muted">Lead Designer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                    <h4>Diana Petersen</h4>
+                    <p class="text-muted">Lead Marketer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                    <h4>Larry Parker</h4>
+                    <p class="text-muted">Lead Developer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+        </div>
+    </div>
+</section>
+<!-- Clients-->
+<div class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-heading text-uppercase text-white">Contact Us</h2>
+            <h3 class="section-subheading text-muted">We are here to assist you. Reach us anytime!</h3>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-header bg-warning text-center">
+                        <h3 class="m-0">Google Map Location</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7967.537561022064!2d101.591467!3d3.155565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4fd9dcba849b%3A0x5e4eb8922061a73b!2sKL%20Tint%20Studio%20Kota%20Damansara!5e0!3m2!1sen!2sbd!4v1745214855437!5m2!1sen!2sbd"
+                                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-header bg-warning text-center">
+                        <h3 class="m-0">Contact Information</h3>
+                    </div>
+                    <ul class="list-unstyled text-dark p-4">
+                        <li class="mb-3"><strong>Opening Hours:</strong> Monday – Sunday (09:00 AM – 08:00 PM)</li>
+                        <li class="mb-3"><i class="bi bi-geo-alt-fill"></i> <strong>Address:</strong> The Strand, 35, Jalan PJU 5/20a, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia</li>
+                        <li class="mb-3"><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +1235 2355 98</li>
+                        <li class="mb-3"><i class="bi bi-envelope-open-fill"></i> <strong>Email:</strong> info@yoursite.com</li>
+                        <li><i class="bi bi-globe"></i> <strong>Website:</strong> <a href="#" class="text-primary text-decoration-underline">yoursite.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; @DateTime.Now.Year </div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+ </footer>
+
+<!-- Booking Modal -->
+@* <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="bookingForm" method="post" asp-action="Create" asp-controller="Booking">
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="ServiceCategoryId" class="form-label">Category</label>
+                            <select class="form-select" id="ServiceCategoryId" name="ServiceCategoryId" onchange="loadItemsByCategory(this.value)">
+                                <option selected disabled>-- Select Category --</option>
+                                @foreach (var cat in ViewBag.ServiceCategories)
+                                {
+                                    <option value="@cat.Id">@cat.CategoryName </option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ServiceItemId" class="form-label">Item</label>
+                            <select class="form-select mt-3 d-none" name="ServiceItemId" id="ServiceItemId">
+                                <option selected disabled>-- Select Item --</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="BookingDate" class="form-label">Booking Date & Time</label>
+                            <input type="datetime-local" id="BookingDate" name="BookingDate" class="form-control" required min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" name="CustomerName" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerMobile" class="form-label">Mobile</label>
+                            <input type="tel" class="form-control" name="CustomerMobile" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="CustomerEmail" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CarModel" class="form-label">Car Model</label>
+                            <input type="text" class="form-control" name="CarModel" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CarNumberPlate" class="form-label">Car Number Plate</label>
+                            <input type="text" class="form-control" name="CarNumberPlate" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="CustomerMessage" class="form-label">Message (Optional)</label>
+                            <textarea class="form-control" name="CustomerMessage" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> *@
+
+
+
+@section Scripts {
+    <!-- 2. Script to handle item load -->
+    <script>
+            $(document).ready(function () {
+            $('#ServiceCategoryId').change(function () {
+                var categoryId = $(this).val();
+                if (categoryId) {
+                    $.ajax({
+                        url: '/Booking/GetItemsByCategory',
+                        type: 'GET',
+                        data: { categoryId: categoryId },
+                        success: function (data) {
+                            let $itemSelect = $('#ServiceItemId');
+                            $itemSelect.empty().append('<option value="">Select Item</option>');
+                            $.each(data, function (i, item) {
+                                $itemSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                            });
+                            $itemSelect.removeClass('d-none');
+                        }
+                    });
+                }
+            });
+        });
+
+        const allItems = @Html.Raw(Json.Serialize(ViewBag.ServiceItems));
+
+        function loadItemsByCategory(categoryId) {
+            const itemDropdown = document.getElementById('ItemId');
+            itemDropdown.innerHTML = '<option selected disabled>-- Select Item --</option>';
+
+            const matchedItems = allItems.filter(item => item.serviceCategoryId === parseInt(categoryId));
+
+            matchedItems.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item.id;
+                option.textContent = item.name;
+                itemDropdown.appendChild(option);
+            });
+
+            itemDropdown.classList.remove('d-none');
+        }
+
+    </script>
+}

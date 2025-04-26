@@ -1,0 +1,169 @@
+﻿@* @model TintApp.Models.ServiceCategory
+ *@
+@* <style>
+    body {
+        background-color: #f7f9fc;
+    }
+</style> *@
+
+@* 
+<div class="container mt-5">
+    <!-- Category Title -->
+    <div class="text-center mb-4">
+        <h2 class="display-6 text-primary fw-bold border-bottom pb-2 d-inline-block">
+            @Model.CategoryName
+        </h2>
+    </div>
+
+    <!-- Service Item Details -->
+    <div class="row bg-white rounded shadow p-4 align-items-center">
+        @foreach (var item in Model.Items)
+        {
+            <!-- Image -->
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="position-relative overflow-hidden rounded-3">
+                    <img src="@item.PictureUrl" alt="@item.ItemName" class="img-fluid rounded" style="width:300px; height:180px;">
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="col-md-6">
+                <h3 class="fw-bold text-dark">@item.ItemName</h3>
+                <h4 class="text-success">৳@item.Price</h4>
+
+                <p class="text-muted mt-3">@item.Description</p>
+
+                <!-- Rating Example -->
+                <div class="d-flex align-items-center mb-3">
+                    <span class="me-2 text-warning">★ ★ ★ ★ ☆</span>
+                    <small class="text-muted">4.2 (120 Reviews)</small>
+                </div>
+
+                <!-- Book Button -->
+                @* <a href="#" class="btn btn-primary btn-lg mt-3 px-4 rounded-pill shadow-sm mb-4">
+                    Book Now
+                </a> *@
+@*                 <a href="#" class="btn btn-primary btn-lg mt-3 px-4 rounded-pill shadow-sm mb-4" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</a>
+ *@
+
+@* 
+            </div>
+        }
+    </div>
+
+
+</div> *@ 
+
+<!-- Booking Modal -->
+@* <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="bookingModalLabel">Book Your Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="bookingForm" method="post" asp-action="Create" asp-controller="Booking">
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="ServiceCategoryId" class="form-label">Category</label>
+                            <select class="form-select" id="ServiceCategoryId" name="ServiceCategoryId" onchange="loadItemsByCategory(this.value)">
+                                <option selected disabled>-- Select Category --</option>
+                                @foreach (var cat in ViewBag.ServiceCategories)
+                                {
+                                    <option value="@cat.Id">@cat.CategoryName </option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ServiceItemId" class="form-label">Item</label>
+                            <select class="form-select mt-3 d-none" name="ServiceItemId" id="ServiceItemId">
+                                <option selected disabled>-- Select Item --</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="BookingDate" class="form-label">Booking Date & Time</label>
+                            <input type="datetime-local" id="BookingDate" name="BookingDate" class="form-control" required min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" name="CustomerName" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerMobile" class="form-label">Mobile</label>
+                            <input type="tel" class="form-control" name="CustomerMobile" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CustomerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="CustomerEmail" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CarModel" class="form-label">Car Model</label>
+                            <input type="text" class="form-control" name="CarModel" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="CarNumberPlate" class="form-label">Car Number Plate</label>
+                            <input type="text" class="form-control" name="CarNumberPlate" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="CustomerMessage" class="form-label">Message (Optional)</label>
+                            <textarea class="form-control" name="CustomerMessage" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ *@
+
+
+@section Scripts {
+    <!-- 2. Script to handle item load -->
+    @* <script>
+            $(document).ready(function () {
+            $('#ServiceCategoryId').change(function () {
+                var categoryId = $(this).val();
+                if (categoryId) {
+                    $.ajax({
+                        url: '/Booking/GetItemsByCategory',
+                        type: 'GET',
+                        data: { categoryId: categoryId },
+                        success: function (data) {
+                            let $itemSelect = $('#ServiceItemId');
+                            $itemSelect.empty().append('<option value="">Select Item</option>');
+                            $.each(data, function (i, item) {
+                                $itemSelect.append('<option value="' + item.id + '">' + item.name + '</option>');
+                            });
+                            $itemSelect.removeClass('d-none');
+                        }
+                    });
+                }
+            });
+        });
+
+        const allItems = @Html.Raw(Json.Serialize(ViewBag.ServiceItems));
+
+        function loadItemsByCategory(categoryId) {
+            const itemDropdown = document.getElementById('ItemId');
+            itemDropdown.innerHTML = '<option selected disabled>-- Select Item --</option>';
+
+            const matchedItems = allItems.filter(item => item.serviceCategoryId === parseInt(categoryId));
+
+            matchedItems.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item.id;
+                option.textContent = item.name;
+                itemDropdown.appendChild(option);
+            });
+
+            itemDropdown.classList.remove('d-none');
+        }
+
+    </script> *@
+}
+

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Manage Bookings";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Manage Bookings</h2>
+
+    <!-- Tab buttons -->
+    <ul class="nav nav-tabs mb-4" id="bookingTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab">Pending Bookings</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button" role="tab">Completed Bookings</button>
+        </li>
+    </ul>
+
+    <!-- Tab contents -->
+    <div class="tab-content" id="bookingTabsContent">
+        <div class="tab-pane fade show active" id="pending" role="tabpanel">
+            <div id="pendingBookingsTable">Loading...</div>
+        </div>
+        <div class="tab-pane fade" id="completed" role="tabpanel">
+            <div id="completedBookingsTable">Loading...</div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            loadPending();
+            loadCompleted();
+
+            function loadPending() {
+                $.get('/Admin/GetPendingBookings', function (data) {
+                    $('#pendingBookingsTable').html(data);
+                });
+            }
+
+            function loadCompleted() {
+                $.get('/Admin/GetCompletedBookings', function (data) {
+                    $('#completedBookingsTable').html(data);
+                });
+            }
+
+            // Mark as Done
+            $(document).on('click', '.mark-done', function () {
+                var id = $(this).data('id');
+                $.post('/Admin/MarkAsDone', { id: id }, function (result) {
+                    if (result.success) {
+                        loadPending();
+                        loadCompleted();
+                    }
+                });
+            });
+
+            // Search functionality
+            $(document).on('keyup', '.search-box', function () {
+                var value = $(this).val().toLowerCase();
+                $(this).closest('.tab-pane').find('tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

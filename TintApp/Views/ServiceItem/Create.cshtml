@@ -1,0 +1,42 @@
+﻿@model TintApp.Models.ServiceItem
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ServiceItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <input type="hidden" asp-for="ServiceCategoryId" value="@ViewBag.CategoryId" />
+            <div class="mb-2">
+                <label asp-for="ItemName"></label>
+                <input asp-for="ItemName" class="form-control" />
+            </div>
+            <div class="mb-2">
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+            <div class="mb-2">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="mb-2">
+                <label>Upload Service Image</label>
+                <input type="file" name="PictureFile" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

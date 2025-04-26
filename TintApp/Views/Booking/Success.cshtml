@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "Success";
+}
+
+<div class="card">
+    <h2>Booking Successful!</h2>
+    <p>@TempData["SuccessMessage"]</p>
+    <a href="@TempData["PdfUrl"]" class="btn btn-success">Download Booking Receipt (PDF)</a>
+</div>
+
+

@@ -1,0 +1,38 @@
+﻿@using TintApp.ViewModels
+@model CategoryWithItemsVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Category: @Model.Category.CategoryName</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Service Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ItemName</td>
+                <td>@item.Price</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.PictureUrl))
+                    {
+                        <img src="@item.PictureUrl" width="80" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" onclick="return confirm('Delete this Item?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TintApp.Models.Booking>
+
+<input class="form-control mb-3 search-box" placeholder="Search completed bookings..." />
+
+<table class="table table-bordered">
+    <thead class="table-success">
+        <tr>
+            <th>Customer</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.CustomerName</td>
+                <td>@booking.ServiceItem.ItemName</td>
+                <td>@booking.BookingDate.ToShortDateString()</td>
+                <td><span class="badge bg-success">Completed</span></td>
+            </tr>
+        }
+    </tbody>
+</table>
