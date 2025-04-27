@@ -5,22 +5,43 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Manage Bookings</h2>
 
-    <!-- Tab buttons -->
-    <ul class="nav nav-tabs mb-4" id="bookingTabs" role="tablist">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="bookingTabs" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab">Pending Bookings</button>
+            <button class="nav-link active" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button">Pending</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button" role="tab">Completed Bookings</button>
+            <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button">Completed</button>
         </li>
     </ul>
 
     <!-- Tab contents -->
-    <div class="tab-content" id="bookingTabsContent">
+    <div class="tab-content mt-4" id="bookingTabsContent">
         <div class="tab-pane fade show active" id="pending" role="tabpanel">
+            <div class="row mb-3">
+                <div class="col-md-3"><input id="pendingSearch" class="form-control" placeholder="Search..." /></div>
+                <div class="col-md-3"><input id="pendingFromDate" type="date" class="form-control" /></div>
+                <div class="col-md-3"><input id="pendingToDate" type="date" class="form-control" /></div>
+                <div class="col-md-3"><button class="btn btn-primary w-100" onclick="loadPending()">Filter</button></div>
+            </div>
             <div id="pendingBookingsTable">Loading...</div>
+
         </div>
+
+        <div id="carLoader" style="display:none;" class="car-loader-container">
+            <div class="car-animation">
+                <img src="~/sppiners/1.gif" alt="Loading Car" class="car-image">
+                <div class="">Please Wait...</div>
+            </div>
+        </div>
+
         <div class="tab-pane fade" id="completed" role="tabpanel">
+            <div class="row mb-3">
+                <div class="col-md-3"><input id="completedSearch" class="form-control" placeholder="Search..." /></div>
+                <div class="col-md-3"><input id="completedFromDate" type="date" class="form-control" /></div>
+                <div class="col-md-3"><input id="completedToDate" type="date" class="form-control" /></div>
+                <div class="col-md-3"><button class="btn btn-success w-100" onclick="loadCompleted()">Filter</button></div>
+            </div>
             <div id="completedBookingsTable">Loading...</div>
         </div>
     </div>
@@ -32,36 +53,78 @@
             loadPending();
             loadCompleted();
 
-            function loadPending() {
-                $.get('/Admin/GetPendingBookings', function (data) {
-                    $('#pendingBookingsTable').html(data);
-                });
-            }
-
-            function loadCompleted() {
-                $.get('/Admin/GetCompletedBookings', function (data) {
-                    $('#completedBookingsTable').html(data);
-                });
-            }
-
-            // Mark as Done
-            $(document).on('click', '.mark-done', function () {
-                var id = $(this).data('id');
-                $.post('/Admin/MarkAsDone', { id: id }, function (result) {
-                    if (result.success) {
-                        loadPending();
-                        loadCompleted();
-                    }
-                });
+            // Live search for pending
+            $('#pendingSearch').on('input', function () {
+                loadPending();
             });
-
-            // Search functionality
-            $(document).on('keyup', '.search-box', function () {
-                var value = $(this).val().toLowerCase();
-                $(this).closest('.tab-pane').find('tbody tr').filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
+            $('#completedSearch').on('input', function () {
+                loadCompleted();
             });
         });
+
+        function loadPending(page = 1) {
+            showCarLoader(); // Loader দেখাও
+
+            var search = $('#pendingSearch').val();
+            var fromDate = $('#pendingFromDate').val();
+            var toDate = $('#pendingToDate').val();
+
+             $.get('/Admin/GetPendingBookings', { page: page, search: search, fromDate: fromDate, toDate: toDate })
+                                .done(function (data) {
+                                    $('#pendingBookingsTable').html(data);
+                                })
+                                .fail(function () {
+                                    alert('Failed to load data!');
+                                })
+                                .always(function () {
+                                    hideCarLoader(); // কাজ শেষ হলে Loader অফ
+                                });
+        }
+
+                $(document).on('click', '.page-link', function () {
+            var page = $(this).data('page'); // Get the page number
+            loadCompleted(page);
+        });
+
+
+        function loadCompleted(page = 1) {
+            showCarLoader(); // Loader দেখাও
+
+            var search = $('#completedSearch').val();
+            var fromDate = $('#completedFromDate').val();
+            var toDate = $('#completedToDate').val();
+
+                            $.get('/Admin/GetCompletedBookings', { page: page, search: search, fromDate: fromDate, toDate: toDate })
+                            .done(function (data) {
+                                $('#completedBookingsTable').html(data);
+
+                            })
+                            .fail(function () {
+                                alert('Failed to load data!');
+                            })
+                            .always(function () {
+                                hideCarLoader(); // কাজ শেষ হলে Loader অফ
+                            });
+        }
+
+        $(document).on('click', '.mark-done', function () {
+            var id = $(this).data('id');
+            $.post('/Admin/MarkAsDone', { id: id }, function (result) {
+                if (result.success) {
+                    loadPending();
+                    loadCompleted();
+                }
+            });
+        });
+                function showCarLoader() {
+            $('#carLoader').show();
+        }
+
+        function hideCarLoader() {
+            
+                $('.car-loader-container').fadeOut();
+            
+        }
     </script>
 }
+

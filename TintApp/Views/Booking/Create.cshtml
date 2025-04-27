@@ -2,12 +2,16 @@
 
 @{
     ViewData["Title"] = "Create Booking";
+    ViewBag.PagePaddingClass = "p-5 m-5";
 }
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-12">
         <form asp-action="Create" method="post">
-            <h2>Create a Booking</h2>
+            <div class="text-center">
+                <h4 class="display-6 text-primary fw-bold border-bottom pb-2 d-inline-block">Create a Booking</h4>
+
+            </div>
 
             @if (TempData["SuccessMessage"] != null)
             {
@@ -25,69 +29,113 @@
                     <p>@TempData["ErrorMessage"]</p>
                 </div>
             }
+                <div class="row mt-2">
+                        <div class="col-2">
+                            <label asp-for="CustomerName" class="col-form-label"></label>
 
-            <div class="form-group mt-2">
-                <label asp-for="CustomerName" class="control-label"></label>
-                <input asp-for="CustomerName" class="form-control" />
-                <span asp-validation-for="CustomerName" class="text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                            <input asp-for="CustomerName" class="form-control" />
+                            <span asp-validation-for="CustomerName" class="text-danger"></span>
+                        </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-2">
+                    <label asp-for="BookingDate" class="control-label"></label>
+
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="BookingDate" class="form-control" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                        <span asp-validation-for="BookingDate" class="text-danger"></span>
+                    </div>
+                </div>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="ServiceCategoryId" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <select asp-for="ServiceCategoryId" class="form-control" asp-items="ViewBag.ServiceCategories" onchange="loadServiceItems()">
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="ServiceItemId" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <select asp-for="ServiceItemId" id="serviceItems" class="form-control" onchange="updatePriceField()">
+                        <option value="">Select Service Item</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group mt-2">
-                <label asp-for="BookingDate" class="control-label"></label>
-                <input asp-for="BookingDate" class="form-control" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
-                <span asp-validation-for="BookingDate" class="text-danger"></span>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label>Price</label>
+
+                </div>
+                <div class="col-4">
+                    <input id="serviceItemPrice" class="form-control" readonly />
+                    <input type="hidden" asp-for="Price" />
+                </div>
             </div>
 
-            <div class="form-group mt-2">
-                <label asp-for="ServiceCategoryId" class="control-label"></label>
-                <select asp-for="ServiceCategoryId" class="form-control" asp-items="ViewBag.ServiceCategories" onchange="loadServiceItems()">
-                    <option value="">Select Category</option>
-                </select>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="CustomerMobile" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <input asp-for="CustomerMobile" class="form-control" type="number" />
+                    <span asp-validation-for="CustomerMobile" class="text-danger"></span>
+                </div>
             </div>
 
-            <div class="form-group mt-2">
-                <label asp-for="ServiceItemId" class="control-label"></label>
-                <select asp-for="ServiceItemId" id="serviceItems" class="form-control" onchange="updatePriceField()">
-                    <option value="">Select Service Item</option>
-                </select>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="CustomerEmail" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <input asp-for="CustomerEmail" class="form-control" />
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="CarModel" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <input asp-for="CarModel" class="form-control" />
+                    <span asp-validation-for="CarModel" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="CarNumberPlate" class="control-label"></label>
+
+                </div>
+                <div class="col-4">
+                    <input asp-for="CarNumberPlate" class="form-control" />
+                    <span asp-validation-for="CarNumberPlate" class="text-danger"></span>
+                </div>
             </div>
 
-            <div class="form-group mt-2">
-                <label>Price</label>
-                <input id="serviceItemPrice" class="form-control" readonly />
-                <input type="hidden" asp-for="Price" />
-            </div>
+            <div class="row mt-2">
+                <div class="col-2">
+                    <label asp-for="CustomerMessage" class="control-label"></label>
 
-            <div class="form-group mt-2">
-                <label asp-for="CustomerMobile" class="control-label"></label>
-                <input asp-for="CustomerMobile" class="form-control" type="number" />
-                <span asp-validation-for="CustomerMobile" class="text-danger"></span>
+                </div>
+                <div class="col-4">
+                    <input asp-for="CustomerMessage" class="form-control" />
+                    <span asp-validation-for="CustomerMessage" class="text-danger"></span>
+                </div>
             </div>
-
             <div class="form-group mt-2">
-                <label asp-for="CustomerEmail" class="control-label"></label>
-                <input asp-for="CustomerEmail" class="form-control" />
-            </div>
-
-            <div class="form-group mt-2">
-                <label asp-for="CarModel" class="control-label"></label>
-                <input asp-for="CarModel" class="form-control" />
-                <span asp-validation-for="CarModel" class="text-danger"></span>
-            </div>
-
-            <div class="form-group mt-2">
-                <label asp-for="CarNumberPlate" class="control-label"></label>
-                <input asp-for="CarNumberPlate" class="form-control" />
-                <span asp-validation-for="CarNumberPlate" class="text-danger"></span>
-            </div>
-
-            <div class="form-group mt-2">
-                <label asp-for="CustomerMessage" class="control-label"></label>
-                <input asp-for="CustomerMessage" class="form-control" />
-                <span asp-validation-for="CustomerMessage" class="text-danger"></span>
-            </div>
-
-            <div class="form-group mt-3">
                 <button type="submit" class="btn btn-primary">Save Booking</button>
             </div>
         </form>

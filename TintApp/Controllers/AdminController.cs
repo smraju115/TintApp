@@ -17,27 +17,86 @@ namespace TintApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPendingBookings()
+        public async Task<IActionResult> GetPendingBookings(int page = 1, int pageSize = 1, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
         {
-            var pending = await _context.Bookings
-                .Include(b => b.ServiceItem) // এইটা যোগ করতে হবে
-                .Where(b => b.Status == "Pending")
+            var query = _context.Bookings
+                .Include(b => b.ServiceItem)
+                .Where(b => b.Status == "Pending");
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(b => b.CustomerName.Contains(search) || b.ServiceItem.ItemName.Contains(search));
+            }
+
+            if (fromDate.HasValue)
+            {
+                query = query.Where(b => b.BookingDate.Date >= fromDate.Value.Date);
+            }
+            if (toDate.HasValue)
+            {
+                query = query.Where(b => b.BookingDate.Date <= toDate.Value.Date);
+            }
+
+            var totalRecords = await query.CountAsync();
+            var bookings = await query
                 .OrderByDescending(b => b.BookingDate)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
 
-            return PartialView("_PendingBookingsPartial", pending);
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+            ViewBag.PageSize = pageSize;
+
+            // Calculate the starting serial number for the current page
+            int serialStart = (page - 1) * pageSize + 1;
+
+            // Pass the bookings and serial number starting point to the view
+            ViewBag.SerialStart = serialStart;
+
+            return PartialView("_PendingBookingsPartial", bookings);
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCompletedBookings()
+        public async Task<IActionResult> GetCompletedBookings(int page = 1, int pageSize = 1, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
         {
-            var completed = await _context.Bookings
-                .Include(b => b.ServiceItem) // এইটাও লাগবে
-                .Where(b => b.Status == "Done")
+            var query = _context.Bookings
+                .Include(b => b.ServiceItem)
+                .Where(b => b.Status == "Done");
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(b => b.CustomerName.Contains(search) || b.ServiceItem.ItemName.Contains(search));
+            }
+
+            if (fromDate.HasValue)
+            {
+                query = query.Where(b => b.BookingDate.Date >= fromDate.Value.Date);
+            }
+            if (toDate.HasValue)
+            {
+                query = query.Where(b => b.BookingDate.Date <= toDate.Value.Date);
+            }
+
+            var totalRecords = await query.CountAsync();
+            var bookings = await query
                 .OrderByDescending(b => b.BookingDate)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
 
-            return PartialView("_CompletedBookingsPartial", completed);
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+            ViewBag.PageSize = pageSize;
+
+            // Calculate the starting serial number for the current page
+            int serialStart = (page - 1) * pageSize + 1;
+
+            // Pass the bookings and serial number starting point to the view
+            ViewBag.SerialStart = serialStart;
+
+            return PartialView("_CompletedBookingsPartial", bookings);
         }
 
         [HttpPost]

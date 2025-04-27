@@ -2149,10 +2149,13 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\pdfs\16CDE056.pdf
+wwwroot\pdfs\3D1223F1.pdf
 wwwroot\pdfs\6DF33F95.pdf
 wwwroot\pdfs\7B140758.pdf
 wwwroot\pdfs\8DF4A445.pdf
 wwwroot\pdfs\B35A12FF.pdf
+wwwroot\pdfs\CF421032.pdf
+wwwroot\sppiners\1.gif
 wwwroot\uploads\category\6b3bf0bb-8d54-4949-b5b5-775caef91fd6.jpeg
 wwwroot\uploads\item\6cc8a258-e479-493f-9798-27ce10aa3510.jpeg
 wwwroot\uploads\item\8cd94941-90ef-4d0d-aa7b-b2e769c74ce6.jpeg

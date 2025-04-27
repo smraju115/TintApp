@@ -463,3 +463,4 @@ D:\Unc works\TintApp\TintApp\obj\Debug\net8.0\TintApp.MvcApplicationPartsAssembl
 D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Rotativa.AspNetCore.dll
 D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\itextsharp.dll
+D:\Unc works\TintApp\TintApp\obj\Debug\net8.0\TintApp.sourcelink.json
