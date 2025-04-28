@@ -4,13 +4,21 @@
 @{
     ViewData["Title"] = "Details";
     ViewBag.PagePaddingClass = "p-5 m-5";
+    int sl = 1;
 }
 
-<h2>Category: @Model.Category.CategoryName</h2>
+<div class="">
+    <h2>Category: @Model.Category.CategoryName</h2>
+</div>
+<div class="text-end mb-2">
+    <a asp-action="Index" class="btn btn-primary btn-sm">Back to List</a>
+
+</div>
 
 <table class="table table-bordered">
     <thead>
         <tr>
+            <th>SL</th>
             <th>Service Name</th>
             <th>Price</th>
             <th>Image</th>
@@ -21,6 +29,7 @@
         @foreach (var item in Model.Items)
         {
             <tr>
+                <td>@(sl++)</td>
                 <td>@item.ItemName</td>
                 <td>@item.Price</td>
                 <td>

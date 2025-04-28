@@ -5,6 +5,10 @@
     {
       "library": "bootstrap-icons@1.11.3",
       "destination": "wwwroot/bootstrap-icons/"
+    },
+    {
+      "library": "mdb-ui-kit@8.2.0",
+      "destination": "wwwroot/lib/mdb-ui-kit/"
     }
   ]
 }

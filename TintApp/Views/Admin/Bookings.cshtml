@@ -82,8 +82,14 @@
         }
 
                 $(document).on('click', '.page-link', function () {
-            var page = $(this).data('page'); // Get the page number
-            loadCompleted(page);
+            var page = $(this).data('page');
+
+            if ($('#pending').hasClass('active')) {
+                loadPending(page); // যদি Pending Tab Active হয়
+            }
+            else if ($('#completed').hasClass('active')) {
+                loadCompleted(page); // যদি Completed Tab Active হয়
+            }
         });
 
 

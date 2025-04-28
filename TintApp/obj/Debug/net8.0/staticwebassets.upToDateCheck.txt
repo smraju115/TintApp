@@ -2089,6 +2089,8 @@ wwwroot\bootstrap-icons\icons\zoom-out.svg
 wwwroot\css\site.css
 wwwroot\css\styles.css
 wwwroot\favicon.ico
+wwwroot\images\logo.png
+wwwroot\images\signature.png
 wwwroot\js\scripts.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
@@ -2154,6 +2156,7 @@ wwwroot\pdfs\6DF33F95.pdf
 wwwroot\pdfs\7B140758.pdf
 wwwroot\pdfs\8DF4A445.pdf
 wwwroot\pdfs\B35A12FF.pdf
+wwwroot\pdfs\C37E4431.pdf
 wwwroot\pdfs\CF421032.pdf
 wwwroot\sppiners\1.gif
 wwwroot\uploads\category\6b3bf0bb-8d54-4949-b5b5-775caef91fd6.jpeg

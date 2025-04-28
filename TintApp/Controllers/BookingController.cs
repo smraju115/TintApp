@@ -1,5 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +12,7 @@ using TintApp.Models;
 
 namespace TintApp.Controllers
 {
+    [Authorize(Roles = "Admin, SuperAdmin")]
     public class BookingController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -59,7 +62,39 @@ namespace TintApp.Controllers
             return View(booking);
         }
 
-        // PDF Generation Method
+        //PDF Generation Method
+        //private string GenerateBookingPdf(Booking booking)
+        //{
+        //    var webRootPath = _webHostEnvironment.WebRootPath;
+        //    var pdfFolderPath = Path.Combine(webRootPath, "pdfs");
+
+        //    if (!Directory.Exists(pdfFolderPath))
+        //    {
+        //        Directory.CreateDirectory(pdfFolderPath);
+        //    }
+
+        //    var filePath = Path.Combine(pdfFolderPath, $"{booking.BookingNumber}.pdf");
+
+        //    using (var stream = new FileStream(filePath, FileMode.Create))
+        //    {
+        //        var document = new iTextSharp.text.Document();
+        //        PdfWriter.GetInstance(document, stream);
+        //        document.Open();
+
+        //        document.Add(new Paragraph("Company Name: Tint ML"));
+        //        document.Add(new Paragraph($"Booking Number: {booking.BookingNumber}"));
+        //        document.Add(new Paragraph($"Customer Name: {booking.CustomerName}"));
+        //        document.Add(new Paragraph($"Car Model: {booking.CarModel} - Plate: {booking.CarNumberPlate}"));
+        //        document.Add(new Paragraph($"Booking Date: {booking.BookingDate.ToString("dd/MM/yyyy hh:mm tt")}"));
+        //        document.Add(new Paragraph($"Service: {booking.ServiceItem?.ItemName ?? "N/A"}"));
+        //        document.Add(new Paragraph($"Price: {booking.Price}"));
+        //        document.Close();
+        //    }
+
+        //    return "/pdfs/" + $"{booking.BookingNumber}.pdf";
+        //}
+
+
         private string GenerateBookingPdf(Booking booking)
         {
             var webRootPath = _webHostEnvironment.WebRootPath;
@@ -74,22 +109,121 @@ namespace TintApp.Controllers
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                var document = new iTextSharp.text.Document();
-                PdfWriter.GetInstance(document, stream);
+                var document = new iTextSharp.text.Document(PageSize.A4, 36, 36, 36, 36);
+                var writer = PdfWriter.GetInstance(document, stream);
                 document.Open();
 
-                document.Add(new Paragraph("Company Name: Tint ML"));
-                document.Add(new Paragraph($"Booking Number: {booking.BookingNumber}"));
-                document.Add(new Paragraph($"Customer Name: {booking.CustomerName}"));
-                document.Add(new Paragraph($"Car Model: {booking.CarModel} - Plate: {booking.CarNumberPlate}"));
-                document.Add(new Paragraph($"Booking Date: {booking.BookingDate.ToString("dd/MM/yyyy hh:mm tt")}"));
-                document.Add(new Paragraph($"Service: {booking.ServiceItem?.ItemName ?? "N/A"}"));
-                document.Add(new Paragraph($"Price: {booking.Price}"));
+                // Logo image
+                string logoPath = Path.Combine(webRootPath, "images", "logo.png"); // তুমি logo.png ওয়েব root-এর images ফোল্ডারে রাখবা
+                if (System.IO.File.Exists(logoPath))
+                {
+                    var logo = Image.GetInstance(logoPath);
+                    logo.ScaleAbsolute(80f, 80f); // লোগোর সাইজ
+                    logo.Alignment = Image.ALIGN_LEFT;
+                    document.Add(logo);
+                }
+
+                // Company Name
+                var companyName = new Paragraph("Tint ML", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 20f, iTextSharp.text.Font.BOLD));
+                companyName.Alignment = Element.ALIGN_CENTER;
+                document.Add(companyName);
+
+                // Address
+                var address = new Paragraph("123 Main Street, Dhaka, Bangladesh\nMobile: 017xxxxxxxx\nEmail: info@tintml.com", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f));
+                address.Alignment = Element.ALIGN_CENTER;
+                document.Add(address);
+
+                // Divider line
+                document.Add(new Paragraph(" "));
+                var line = new iTextSharp.text.pdf.draw.LineSeparator(1.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1);
+                document.Add(new Chunk(line));
+                document.Add(new Paragraph(" "));
+
+                // Booking Receipt Heading
+                var heading = new Paragraph("Booking Receipt", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 16f, iTextSharp.text.Font.BOLD));
+                heading.Alignment = Element.ALIGN_CENTER;
+                document.Add(heading);
+                document.Add(new Paragraph(" "));
+
+                // Booking Details
+                PdfPTable table = new PdfPTable(2);
+                table.WidthPercentage = 100;
+                table.SpacingBefore = 10f;
+                table.SpacingAfter = 10f;
+                float[] widths = { 1f, 2f };
+                table.SetWidths(widths);
+
+                table.AddCell("Booking Number:");
+                table.AddCell(booking.BookingNumber);
+
+                table.AddCell("Customer Name:");
+                table.AddCell(booking.CustomerName);
+
+                table.AddCell("Car Model & Plate:");
+                table.AddCell($"{booking.CarModel} - {booking.CarNumberPlate}");
+
+                table.AddCell("Booking Date:");
+                table.AddCell(booking.BookingDate.ToString("dd/MM/yyyy hh:mm tt"));
+
+                table.AddCell("Service:");
+                table.AddCell(booking.ServiceItem?.ItemName ?? "N/A");
+
+                table.AddCell("Price:");
+                table.AddCell(booking.Price?.ToString("N2") + " BDT");
+
+                document.Add(table);
+
+                // Barcode
+                var barcode128 = new Barcode128
+                {
+                    Code = booking.BookingNumber,
+                    StartStopText = false,
+                    CodeType = Barcode.CODE128
+                };
+                Image barcodeImage = barcode128.CreateImageWithBarcode(writer.DirectContent, null, null);
+                barcodeImage.Alignment = Image.ALIGN_CENTER;
+                document.Add(barcodeImage);
+
+                document.Add(new Paragraph(" "));
+
+                // Slogan
+                var slogan = new Paragraph("\"Your Satisfaction is Our Priority!\"", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.ITALIC, BaseColor.GRAY));
+                slogan.Alignment = Element.ALIGN_CENTER;
+                document.Add(slogan);
+
+                document.Add(new Paragraph(" "));
+
+                // Signature Line
+                var signLine = new Paragraph("Authorized Signature", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f));
+                signLine.Alignment = Element.ALIGN_RIGHT;
+                document.Add(signLine);
+
+                // Signature Image
+                string signPath = Path.Combine(webRootPath, "images", "signature.png"); // তোমার সিগনেচার ইমেজ এখানে থাকবে
+                if (System.IO.File.Exists(signPath))
+                {
+                    var signImage = Image.GetInstance(signPath);
+                    signImage.ScaleAbsolute(120f, 40f); // Signature image size
+                    signImage.Alignment = Image.ALIGN_RIGHT;
+                    document.Add(signImage);
+                }
+
                 document.Close();
             }
 
             return "/pdfs/" + $"{booking.BookingNumber}.pdf";
         }
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: Booking/Success
         public IActionResult Success()

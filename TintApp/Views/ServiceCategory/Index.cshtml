@@ -2,14 +2,17 @@
 @{
     ViewData["Title"] = "Service Categories";
     ViewBag.PagePaddingClass = "p-5 m-5";
+    int sl = 1;
 }
 
 <h2>All Categories</h2>
-<a class="btn btn-primary" asp-action="Create">+ Add New Category</a>
+<a class="btn btn-primary btn-sm" asp-action="Create">+ Add New Category</a>
 
 <table class="table table-bordered mt-3">
     <thead>
         <tr>
+            <th>SL</th>
+            <th>Image</th>
             <th>Category</th>
             <th>Title</th>
             <th>Total Services</th>
@@ -20,6 +23,10 @@
         @foreach (var c in Model)
         {
             <tr>
+                <td>@(sl++)</td>
+                <td>
+                   <img src="@c.ImageUrl"  class="rounded-3" width="100px"/>
+                </td>
                 <td>@c.CategoryName</td>
                 <td>@c.Title</td>
                 <td>

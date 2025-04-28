@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -24,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\pdfs\" />
-    <Folder Include="wwwroot\Rotativa\" />
     <Folder Include="wwwroot\uploads\category\" />
     <Folder Include="wwwroot\uploads\item\" />
   </ItemGroup>

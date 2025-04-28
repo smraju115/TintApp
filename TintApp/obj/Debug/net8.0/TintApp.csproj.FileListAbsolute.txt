@@ -464,3 +464,8 @@ D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Rotativa.AspNetCore.dll
 D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\itextsharp.dll
 D:\Unc works\TintApp\TintApp\obj\Debug\net8.0\TintApp.sourcelink.json
+D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Unc works\TintApp\TintApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

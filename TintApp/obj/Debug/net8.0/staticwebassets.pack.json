@@ -8369,6 +8369,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\images\\signature.png",
+      "PackagePath": "staticwebassets\\images\\signature.png"
+    },
+    {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
@@ -8627,6 +8635,10 @@
     {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\pdfs\\B35A12FF.pdf",
       "PackagePath": "staticwebassets\\pdfs\\B35A12FF.pdf"
+    },
+    {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\pdfs\\C37E4431.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\C37E4431.pdf"
     },
     {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\pdfs\\CF421032.pdf",
