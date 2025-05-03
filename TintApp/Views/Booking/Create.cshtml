@@ -12,125 +12,125 @@
                 <h4 class="display-6 text-primary fw-bold border-bottom pb-2 d-inline-block">Create a Booking</h4>
 
             </div>
-
             @if (TempData["SuccessMessage"] != null)
             {
-                <div class="alert alert-success position-relative" role="alert">
-                    <h4 class="alert-heading">Success!</h4>
-                    <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <p>@TempData["SuccessMessage"]</p>
-                    <a href="@TempData["PdfUrl"]" class="btn btn-success" target="_blank">Download Receipt (PDF)</a>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>@TempData["SuccessMessage"]</strong><br />
+                    @if (TempData["PdfUrl"] != null)
+                    {
+                        <a href="@TempData["PdfUrl"]" target="_blank" class="btn btn-sm btn-primary mt-2">
+                            Download PDF
+                        </a>
+                    }
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
-            else if (TempData["ErrorMessage"] != null)
+            @if (TempData["ErrorMessage"] != null)
             {
-                <div class="alert alert-danger position-relative" role="alert">
-                    <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <p>@TempData["ErrorMessage"]</p>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>@TempData["ErrorMessage"]</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
+
                 <div class="row mt-2">
-                        <div class="col-2">
+                <div class="col-12 col-md-2">
                             <label asp-for="CustomerName" class="col-form-label"></label>
 
                         </div>
-                        <div class="col-4">
+                <div class="col-12 col-md-4">
                             <input asp-for="CustomerName" class="form-control" />
                             <span asp-validation-for="CustomerName" class="text-danger"></span>
                         </div>
                 </div>
 
                 <div class="row mt-2">
-                    <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="BookingDate" class="control-label"></label>
 
                     </div>
-                    <div class="col-4">
-                        <input asp-for="BookingDate" class="form-control" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                <div class="col-12 col-md-4">
+                        <input asp-for="BookingDate" class="form-control" type="datetime-local" min="@DateTime.Now.ToLocalTime().ToString("yyyy-MM-ddTHH:mm")" />
                         <span asp-validation-for="BookingDate" class="text-danger"></span>
                     </div>
                 </div>
             <div class="row mt-2">
-                <div class="col-2">
-                    <label asp-for="ServiceCategoryId" class="control-label"></label>
+                <div class="col-12 col-md-2">
+                    <label class="control-label">Service</label>
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="form-control" value="@ViewBag.ServiceCategoryName" readonly />
+                    <input type="hidden" asp-for="ServiceCategoryId" />
 
-                </div>
-                <div class="col-4">
-                    <select asp-for="ServiceCategoryId" class="form-control" asp-items="ViewBag.ServiceCategories" onchange="loadServiceItems()">
-                        <option value="">Select Category</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-2">
-                    <label asp-for="ServiceItemId" class="control-label"></label>
-
-                </div>
-                <div class="col-4">
-                    <select asp-for="ServiceItemId" id="serviceItems" class="form-control" onchange="updatePriceField()">
-                        <option value="">Select Service Item</option>
-                    </select>
                 </div>
             </div>
 
             <div class="row mt-2">
-                <div class="col-2">
-                    <label>Price</label>
+                <div class="col-12 col-md-2">
+                    <label class="control-label">Service</label>
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="form-control" value="@ViewBag.ServiceItemName" readonly />
+                    <input type="hidden" asp-for="ServiceItemId" />
 
                 </div>
-                <div class="col-4">
-                    <input id="serviceItemPrice" class="form-control" readonly />
-                    <input type="hidden" asp-for="Price" />
+            </div>
+            <div class="row mt-2">
+                <div class="col-12 col-md-2">
+                    <label class="control-label">Price</label>
+                </div>
+                <div class="col-12 col-md-4">
+                    <input asp-for="Price" class="form-control" readonly />
                 </div>
             </div>
 
             <div class="row mt-2">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="CustomerMobile" class="control-label"></label>
 
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input asp-for="CustomerMobile" class="form-control" type="number" />
                     <span asp-validation-for="CustomerMobile" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mt-2">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="CustomerEmail" class="control-label"></label>
 
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input asp-for="CustomerEmail" class="form-control" />
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="CarModel" class="control-label"></label>
 
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input asp-for="CarModel" class="form-control" />
                     <span asp-validation-for="CarModel" class="text-danger"></span>
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="CarNumberPlate" class="control-label"></label>
 
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input asp-for="CarNumberPlate" class="form-control" />
                     <span asp-validation-for="CarNumberPlate" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mt-2">
-                <div class="col-2">
+                <div class="col-12 col-md-2">
                     <label asp-for="CustomerMessage" class="control-label"></label>
 
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <input asp-for="CustomerMessage" class="form-control" />
                     <span asp-validation-for="CustomerMessage" class="text-danger"></span>
                 </div>
@@ -150,21 +150,58 @@
     <script>
         function loadServiceItems() {
             var categoryId = document.querySelector('[name="ServiceCategoryId"]').value;
-            $.get('@Url.Action("GetServiceItems", "Booking")', { categoryId: categoryId }, function (data) {
-                var items = $('#serviceItems');
-                items.empty().append('<option value="">Select Item</option>');
+            if (!categoryId) return;
+
+            $.get('/Booking/GetServiceItems', { categoryId: categoryId }, function (data) {
+                var dropdown = $('#serviceItems');
+                dropdown.empty();
+                dropdown.append('<option value="">-- Select Service Item --</option>');
+
                 data.forEach(function (item) {
-                    items.append(`<option value="${item.id}" data-price="${item.price}">${item.itemName}</option>`);
+                    dropdown.append(`<option value="${item.id}">${item.name}</option>`);
                 });
+
+                document.getElementById("serviceItemPrice").value = "";
+                document.querySelector('[name="Price"]').value = "";
             });
         }
 
         function updatePriceField() {
-            var selected = $('#serviceItems option:selected');
-            var price = selected.data('price');
-            $('#serviceItemPrice').val(price);
-            $('[name="Price"]').val(price);
+            var selectedItemId = document.getElementById("serviceItems").value;
+            var allItems = @Html.Raw(Json.Serialize(ViewBag.ServiceItems));
+            var selectedItem = allItems.find(x => x.id == selectedItemId);
+            if (selectedItem) {
+                document.getElementById("serviceItemPrice").value = selectedItem.price;
+                document.querySelector('[name="Price"]').value = selectedItem.price;
+            }
         }
+
+        $(document).ready(function () {
+            const preSelectedCategoryId = $('[name="ServiceCategoryId"]').val();
+            const preSelectedItemId = $('[name="ServiceItemId"]').val();
+
+            if (preSelectedCategoryId) {
+                $.get('/Booking/GetServiceItems', { categoryId: preSelectedCategoryId }, function (data) {
+                    const dropdown = $('#serviceItems');
+                    dropdown.empty();
+                    dropdown.append('<option value="">-- Select Service Item --</option>');
+
+                    data.forEach(function (item) {
+                        const isSelected = (item.id == preSelectedItemId) ? 'selected' : '';
+                        dropdown.append(`<option value="${item.id}" ${isSelected}>${item.name}</option>`);
+                    });
+
+                    updatePriceField();
+                });
+            }
+        });
+
+        $(document).ready(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage !== '') {
+                $('form')[0].reset();
+            }
+        });
     </script>
 }
 

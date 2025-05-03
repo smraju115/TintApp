@@ -59,7 +59,7 @@ namespace TintApp.Controllers
 
                     if (result.Succeeded)
                     {
-                        TempData["SuccessMessage"] = "Login successful! Welcome, " + user.UserName + "!";
+                        //TempData["SuccessMessage"] = "Login successful! Welcome, " + user.UserName + "!";
                         if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                         {
                             return Redirect(returnUrl);

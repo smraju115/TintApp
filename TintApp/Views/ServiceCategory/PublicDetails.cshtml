@@ -40,12 +40,10 @@
                 </div>
 
                 <!-- Book Button -->
-                @* <a href="#" class="btn btn-primary btn-lg mt-3 px-4 rounded-pill shadow-sm mb-4">
-                    Book Now
-                </a> *@
-                <a asp-action="Create" asp-controller="Booking" class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4" >Book Now</a>
-
-
+              
+                <a asp-action="Create" asp-controller="Booking" asp-route-serviceItemId="@item.Id" class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4">Book Now</a>
+                
+                
 
             </div>
         }

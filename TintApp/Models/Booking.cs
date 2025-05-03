@@ -9,10 +9,8 @@ namespace TintApp.Models
         [Required(ErrorMessage ="Customer name is required")]
         [Display(Name = "Name")]
 
-
         public string CustomerName { get; set; }
-        [Required]
-        public string BookingNumber { get; set; } = Guid.NewGuid().ToString().Substring(0, 8).ToUpper(); // Auto generate
+        public string BookingNumber { get; set; }=string.Empty;
 
         [Required(ErrorMessage = "Date Time is required")]
         [DataType(DataType.Date)]
@@ -48,7 +46,7 @@ namespace TintApp.Models
 
         public string CustomerEmail { get; set; }
 
-        [Required(ErrorMessage = "Card Model name is required")]
+        [Required(ErrorMessage = "Car Model name is required")]
         [Display(Name = "Car Model")]
 
         public string CarModel { get; set; }

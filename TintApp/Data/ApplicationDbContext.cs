@@ -16,13 +16,19 @@ namespace TintApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); // ✅ এটাকে অবশ্যই প্রথমে কল করতে হবে 🔥
+            base.OnModelCreating(modelBuilder); 
 
             modelBuilder.Entity<Booking>()
                 .HasOne(b => b.ServiceItem)
                 .WithMany()
                 .HasForeignKey(b => b.ServiceItemId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Global filters
+            modelBuilder.Entity<ServiceCategory>().HasQueryFilter(c => !c.IsDeleted);
+            modelBuilder.Entity<ServiceItem>().HasQueryFilter(s => !s.IsDeleted);
+
+
         }
 
     }

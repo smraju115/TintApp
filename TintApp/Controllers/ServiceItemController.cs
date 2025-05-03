@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TintApp.Data;
 using TintApp.Models;
 
 namespace TintApp.Controllers
 {
+    [Authorize(Roles = "Admin, SuperAdmin")]
     public class ServiceItemController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -75,6 +77,8 @@ namespace TintApp.Controllers
         //    return RedirectToAction("Index", "ServiceCategory");
         //}
 
+
+        //Item Delete Method
         public async Task<IActionResult> Delete(int id)
         {
             var item = await _context.ServiceItems.FindAsync(id);
@@ -93,8 +97,10 @@ namespace TintApp.Controllers
                 }
             }
 
-            _context.ServiceItems.Remove(item);
+            item.IsDeleted = true; // <-- Soft delete
+            _context.ServiceItems.Update(item);
             await _context.SaveChangesAsync();
+
             return RedirectToAction("Index", "ServiceCategory");
         }
     }

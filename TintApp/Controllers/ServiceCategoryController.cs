@@ -7,6 +7,7 @@ using TintApp.ViewModels;
 
 namespace TintApp.Controllers
 {
+    [Authorize(Roles = "Admin, SuperAdmin")]
     public class ServiceCategoryController : Controller
     {
         private readonly IWebHostEnvironment _env;
@@ -67,6 +68,7 @@ namespace TintApp.Controllers
             return View(model);
         }
 
+        //Admin View Details
         public async Task<IActionResult> Details(int id)
         {
             var category = await _context.ServiceCategories.FindAsync(id);
@@ -83,6 +85,8 @@ namespace TintApp.Controllers
             return View(vm);
         }
 
+
+        //Only for Public View
         [AllowAnonymous]
         public IActionResult PublicDetails(int categoryId)
         {
@@ -104,7 +108,8 @@ namespace TintApp.Controllers
             var category = await _context.ServiceCategories.FindAsync(id);
             if (category != null)
             {
-                _context.ServiceCategories.Remove(category);
+                category.IsDeleted = true; // <-- Soft delete
+                _context.ServiceCategories.Update(category);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));

@@ -1,12 +1,18 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Newtonsoft.Json;
 using TintApp.Data;
 using TintApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+    });
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -21,6 +27,10 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Account/Login";   // Login Page
     options.LogoutPath = "/Account/Logout"; // Logout Page
     options.AccessDeniedPath = "/Account/AccessDenied"; // Access Denied Page
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30); //  after 30 min session expire
+    options.SlidingExpiration = false; //   autologout when user/admin inactive
+
+    
 });
 
 var app = builder.Build();

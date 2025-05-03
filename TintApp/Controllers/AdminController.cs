@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TintApp.Data;
 
 namespace TintApp.Controllers
 {
+    [Authorize(Roles = "Admin, SuperAdmin")]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -17,7 +19,7 @@ namespace TintApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPendingBookings(int page = 1, int pageSize = 1, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
+        public async Task<IActionResult> GetPendingBookings(int page = 1, int pageSize = 5, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
         {
             var query = _context.Bookings
                 .Include(b => b.ServiceItem)
@@ -39,7 +41,7 @@ namespace TintApp.Controllers
 
             var totalRecords = await query.CountAsync();
             var bookings = await query
-                .OrderByDescending(b => b.BookingDate)
+                .OrderByDescending(b => b.BookingNumber)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
@@ -59,7 +61,7 @@ namespace TintApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCompletedBookings(int page = 1, int pageSize = 1, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
+        public async Task<IActionResult> GetCompletedBookings(int page = 1, int pageSize = 5, string search = "", DateTime? fromDate = null, DateTime? toDate = null)
         {
             var query = _context.Bookings
                 .Include(b => b.ServiceItem)
