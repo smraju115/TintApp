@@ -1,4 +1,7 @@
 ﻿@model TintApp.Models.ServiceCategory
+@{
+    ViewBag.PagePaddingClass = "p-5 m-5";
+}
 
 <style>
     body {
@@ -19,10 +22,46 @@
     <div class="row bg-white rounded shadow p-4 align-items-center">
         @foreach (var item in Model.Items)
         {
+            <!-- Images -->
+            <div class="row mb-4">
+                @foreach (var img in item.Images.Take(2)) // প্রথম দুইটা ইমেজ
+                {
+                    <div class="col-md-6 mb-3">
+                        <div class="position-relative overflow-hidden rounded-3">
+                            <img src="@img.ImageUrl" alt="@item.ItemName" class="img-fluid rounded w-100" />
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Details -->
+            <div class="col-md-12">
+                <h3 class="fw-bold text-dark">@item.ItemName</h3>
+                <h4 class="text-success">৳@item.Price</h4>
+
+                <p class="text-muted mt-3">@item.Description</p>
+
+                <!-- Rating Example -->
+                <div class="d-flex align-items-center mb-3">
+                    <span class="me-2 text-warning">★ ★ ★ ★ ☆</span>
+                    <small class="text-muted">4.2 (120 Reviews)</small>
+                </div>
+
+                <!-- Book Button -->
+                <a asp-action="Create" asp-controller="Booking" asp-route-serviceItemId="@item.Id"
+                   class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4">Book Now</a>
+            </div>
+        }
+    </div>
+   @*  <div class="row bg-white rounded shadow p-4 align-items-center">
+        @foreach (var item in Model.Items)
+        {
+          
+
             <!-- Image -->
             <div class="col-md-6 mb-3 mb-md-0">
                 <div class="position-relative overflow-hidden rounded-3">
-                    <img src="@item.PictureUrl" alt="@item.ItemName" class="img-fluid rounded" style="width:300px; height:180px;">
+                    <img src="@item.PictureUrl" alt="@item.ItemName" class="img-fluid rounded w-100">
                 </div>
             </div>
 
@@ -47,7 +86,7 @@
 
             </div>
         }
-    </div>
+    </div> *@
 
 
 </div>

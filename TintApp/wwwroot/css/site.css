@@ -27,21 +27,20 @@ body {
 .offer-card {
     position: relative;
     overflow: visible;
-    border-radius: 20px;
+    border: 5px solid orange;
 }
 
 .offer-image {
     width: 100%;
     height: 280px;
-    object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .offer-content {
     position: absolute;
     bottom: -60px; /* এইখানে নিচে নামানোর পরিমাণ */
-    left: 30px;
-    right: 30px;
+    left: 60px;
+    right: 60px;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -59,9 +58,9 @@ body {
     margin-top: 10px;
 }
 
-.offer-button:hover {
-        background-color: #333;
- }
+.offer-content:hover {
+    background-color: darkorange;
+}
 
 
 
@@ -113,4 +112,89 @@ body {
     }
 }
 
-/*Login Page*/
+/*Homne*/
+/*.home1 {
+    text-align: center;
+    color: #fff;
+    background-image: url("../assets/img/Grid.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+.home2 {
+    text-align: center;
+    color: #fff;
+    background-image: url("../assets/img/Grid2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}*/
+/*Services*/
+.services {
+    text-align: center;
+    color: #fff;
+    background-image: url("../assets/img/Grid.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*
+HomeDivStyle*/
+.feature-card {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid orange;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+    .feature-card:hover {
+        background-color: darkorange;
+    }
+
+    .feature-card h5 {
+        font-weight: bold;
+    }
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 15px; /* স্পেস আইকনের নিচে */
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px; /* সব title এর নিচে same space */
+}
+
+.feature-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.homecar-image {
+    max-width: 300px;
+    width: 100%;
+}
+
+.btn-orange {
+    background-color: orange;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+    .btn-orange:hover {
+        background-color: darkorange;
+    }

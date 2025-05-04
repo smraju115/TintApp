@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Unc works\\TintApp\\TintApp\\TintApp.csproj": {}
+    "E:\\SS\\TintApp\\TintApp\\TintApp.csproj": {}
   },
   "projects": {
-    "D:\\Unc works\\TintApp\\TintApp\\TintApp.csproj": {
+    "E:\\SS\\TintApp\\TintApp\\TintApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Unc works\\TintApp\\TintApp\\TintApp.csproj",
+        "projectUniqueName": "E:\\SS\\TintApp\\TintApp\\TintApp.csproj",
         "projectName": "TintApp",
-        "projectPath": "D:\\Unc works\\TintApp\\TintApp\\TintApp.csproj",
-        "packagesPath": "C:\\Users\\1touch_PC1\\.nuget\\packages\\",
-        "outputPath": "D:\\Unc works\\TintApp\\TintApp\\obj\\",
+        "projectPath": "E:\\SS\\TintApp\\TintApp\\TintApp.csproj",
+        "packagesPath": "C:\\Users\\US\\.nuget\\packages\\",
+        "outputPath": "E:\\SS\\TintApp\\TintApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\1touch_PC1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\US\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -106,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

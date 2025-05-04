@@ -26,5 +26,7 @@ namespace TintApp.Models
         public string? Description { get; set; }
 
         public bool IsDeleted { get; set; } = false;
+        public ICollection<ServiceImage>? Images { get; set; }
+
     }
 }

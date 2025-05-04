@@ -12,6 +12,8 @@ namespace TintApp.Data
 
         public DbSet<ServiceCategory> ServiceCategories { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
+        public DbSet<ServiceImage> ServiceImages { get; set; }
+
         public DbSet<Booking> Bookings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

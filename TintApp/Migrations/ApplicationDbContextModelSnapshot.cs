@@ -310,6 +310,28 @@ namespace TintApp.Migrations
                     b.ToTable("ServiceCategories");
                 });
 
+            modelBuilder.Entity("TintApp.Models.ServiceImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ServiceItemId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServiceItemId");
+
+                    b.ToTable("ServiceImages");
+                });
+
             modelBuilder.Entity("TintApp.Models.ServiceItem", b =>
                 {
                     b.Property<int>("Id")
@@ -415,6 +437,17 @@ namespace TintApp.Migrations
                     b.Navigation("ServiceItem");
                 });
 
+            modelBuilder.Entity("TintApp.Models.ServiceImage", b =>
+                {
+                    b.HasOne("TintApp.Models.ServiceItem", "ServiceItem")
+                        .WithMany("Images")
+                        .HasForeignKey("ServiceItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ServiceItem");
+                });
+
             modelBuilder.Entity("TintApp.Models.ServiceItem", b =>
                 {
                     b.HasOne("TintApp.Models.ServiceCategory", "Category")
@@ -429,6 +462,11 @@ namespace TintApp.Migrations
             modelBuilder.Entity("TintApp.Models.ServiceCategory", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("TintApp.Models.ServiceItem", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

@@ -33,13 +33,20 @@
                 <td>@item.ItemName</td>
                 <td>@item.Price</td>
                 <td>
-                    @if (!string.IsNullOrEmpty(item.PictureUrl))
+                    @if (item.Images != null && item.Images.Any())
                     {
-                        <img src="@item.PictureUrl" width="80" />
+                        foreach (var img in item.Images)
+                        {
+                            <img src="@img.ImageUrl" width="80" class="m-1" />
+                        }
+                    }
+                    else
+                    {
+                        <span>No Image</span>
                     }
                 </td>
                 <td>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" onclick="return confirm('Delete this Item?')">Delete</a>
+                    <a asp-action="Delete" asp-controller="ServiceItem" asp-route-id="@item.Id" class="btn btn-sm btn-danger" onclick="return confirm('Delete this Item?')">Delete</a>
                 </td>
             </tr>
         }
