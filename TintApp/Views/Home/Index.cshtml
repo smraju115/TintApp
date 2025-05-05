@@ -13,6 +13,38 @@
     </svg>
 </a>
 
+
+<!-- Services-->
+<section class="page-section services" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Services</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div class="row g-5">
+            @foreach (var offer in Model)
+            {
+                <div class="col-md-4 mb-5">
+                    <div class="offer-card">
+                        <img src="@offer.ImageUrl" alt="Offer Image" class="offer-image">
+                       
+                            <a asp-controller="ServiceCategory" asp-action="PublicDetails" asp-route-categoryId="@offer.Id">
+                                <div class="offer-content">
+                                    <h5 class="text-dark fw-bold text-uppercase">@offer.CategoryName</h5>
+                                    <p class="text-dark">@offer.Title</p>
+                                </div>
+                            </a>
+                      
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Home-->
 <section class="page-section" id="home">
     <div class="container">
         <div class="text-center">
@@ -87,6 +119,80 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading">
+                Nano Ceramic Coating
+            </h2>
+            <h3 class="text-uppercase">Tint ML Studio's Ceramic Coating Expertise: Why Choose Us?</h3>
+            <p class="text-muted">
+                KL Tint Studio, your trusted car care partner in Selangor, Malaysia, offers superior nano ceramic coating services. This cutting-edge technology safeguards your car’s paintwork from various damaging elements, keeping it pristine for years to come.
+            </p>
+
+            <div class="container py-5">
+                <!-- Top Feature Row -->
+                <div class="row text-center align-items-start">
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🌡️</div>
+                            <h5>Unmatched Hydrophobicity</h5>
+                            <p>Effortless cleaning with superior water & dirt repellency.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <!-- Empty middle column for image space -->
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h5> Chemical Resistance </h5>
+                            <p>Guards against environmental contaminants and bird droppings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Car Image Row -->
+                <div class="row justify-content-center mb-2">
+                    <div class="col-md-4 text-center">
+                        <img src="~/assets/img/redcar4.jpg"
+                             class="homecar-image" alt="Car">
+                    </div>
+                </div>
+
+                <!-- Bottom Feature Row -->
+                <div class="row text-center align-items-start">
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">➕</div>
+                            <h5>High-Gloss Finish</h5>
+                            <p>Achieve a stunning, deep wet gloss that makes your car stand out.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <!-- Empty middle column for image alignment -->
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="bi bi-car-front-fill"></i> </div>
+                            <h5> Multi-Stage Detailing Process </h5>
+                            <p>Meticulous preparation maximizes coating adhesion and benefits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <button class="btn btn-orange">View Tint Packages</button>
+                    <button class="btn btn-orange">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+<section class="page-section home2" id="home">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading">
                 Car Tinted Solutions
             </h2>
             <h3 class="text-uppercase">Professional Car Tinting Services in Your Area</h3>
@@ -154,41 +260,154 @@
 
 
     </div>
-</section>
-
-
-
-<!-- Services-->
-<section class="page-section services" id="services">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-        <div class="row g-5">
-            @foreach (var offer in Model)
-            {
-                <div class="col-md-5 mb-5">
-                    <div class="offer-card">
-                        <img src="@offer.ImageUrl" alt="Offer Image" class="offer-image">
-                       
-                            <a asp-controller="ServiceCategory" asp-action="PublicDetails" asp-route-categoryId="@offer.Id">
-                                <div class="offer-content">
-                                    <h5 class="text-dark fw-bold text-uppercase">@offer.CategoryName</h5>
-                                    <p class="text-dark">@offer.Title</p>
-                                </div>
-                            </a>
-                      
+            <h2 class="section-heading">
+                Car Wrapping
+            </h2>
+            <h3 class="text-uppercase">Flawless Car Wraps by KL Tint Studio in Malaysia</h3>
+            <p class="text-muted">ML Tint Studio, the leading car customization expert in Selangor, Malaysia, empowers you to transform your car into a rolling masterpiece with our comprehensive car wrapping services. Go beyond a traditional paint job and explore a world of possibilities with high-quality vinyl wraps.</p>
+
+            <div class="container py-5">
+                <!-- Top Feature Row -->
+                <div class="row text-center align-items-start">
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🌡️</div>
+                            <h5>Limitless Customization Options</h5>
+                            <p>Choose from 2000+ library of colors, finishes, and textures to create a truly unique and personalized car design.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <!-- Empty middle column for image space -->
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h5>Precision Installation by Certified Technicians</h5>
+                            <p>Our highly skilled technicians are experienced in car wrapping, guaranteeing a flawless application with no bubbles, seams, or imperfections.</p>
+                        </div>
                     </div>
                 </div>
-            }
+
+                <!-- Middle Car Image Row -->
+                <div class="row justify-content-center mb-2">
+                    <div class="col-md-4 text-center">
+                        <img src="~/assets/img/redcar4.jpg"
+                             class="homecar-image" alt="Car">
+                    </div>
+                </div>
+
+                <!-- Bottom Feature Row -->
+                <div class="row text-center align-items-start">
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">➕</div>
+                            <h5>Premium Wrapping Films</h5>
+                            <p>We utilize top-of-the-line vinyl films from renowned brands, ensuring vibrant colors, exceptional durability, and a flawless finish.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <!-- Empty middle column for image alignment -->
+                    </div>
+                    <div class="col-md-5 mb-2">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="bi bi-car-front-fill"></i> </div>
+                            <h5> Comprehensive Aftercare Guidance</h5>
+                            <p>We provide detailed care instructions to ensure your car wrap maintains its stunning appearance for years to come.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <button class="btn btn-orange">View Tint Packages</button>
+                    <button class="btn btn-orange">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+<section class="page-section jpj" id="jpj">
+    <div class="container">
+        <div class="text-center fw-bold">
+            <h2>
+                JPJ Tint rules in Malaysia: What You Need to Know
+            </h2>
+            <p>Vehicle owners in Malaysia need to adhere to the regulations set by the Road Transport Department (JPJ) regarding car window tints. These laws are designed to ensure road safety and visibility, and it’s essential for car owners to understand them to avoid penalties.</p>
+        </div>
+        <div class="text-center text-warning">
+            <h3>Understanding JPJ Tinted spec for a Safer Drive in Malaysia</h3>
+        </div>
+        <!-- Content section 1-->
+        <div class="p-4">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-3" src="/JPJ/5.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-4">
+                            <h3>JPJ Tint Guidelines at a Glance:</h3>
+                            <p> <strong>Front Windshield : </strong> Minimum 70% Visible Light Transmission (VLT).</p>
+                            <p> <strong>Front Side Windows: </strong> Minimum 50% VLT.</p>
+                            <p> <strong>Rear Windows & Rear Windshield: </strong> No VLT limit.  </p>
+                            <p>These guidelines ensure clear visibility for safe driving and compliance with law enforcement standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content section 2-->
+        <div class="p-4">
+            <div class="text-center">
+                <h2>
+                    Why Following JPJ Tint Laws Matters
+                </h2>
+            </div>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5"><img class="img-fluid rounded-3" src="/JPJ/8.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4">
+                            <h3>JPJ Tint Guidelines at a Glance :</h3>
+                            <p> <strong>Front Windshield : </strong> Minimum 70% Visible Light Transmission (VLT).</p>
+                            <p> <strong>Front Side Windows: </strong> Minimum 50% VLT.</p>
+                            <p> <strong>Rear Windows & Rear Windshield: </strong> No VLT limit.  </p>
+                            <p>These guidelines ensure clear visibility for safe driving and compliance with law enforcement standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content section 3-->
+        <div class="p-4">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-3" src="/JPJ/7.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-4">
+                            <h3>JPJ Tint Guidelines at a Glance :</h3>
+                            <p> <strong>Front Windshield : </strong> Minimum 70% Visible Light Transmission (VLT).</p>
+                            <p> <strong>Front Side Windows: </strong> Minimum 50% VLT.</p>
+                            <p> <strong>Rear Windows & Rear Windshield: </strong> No VLT limit.  </p>
+                            <p>These guidelines ensure clear visibility for safe driving and compliance with law enforcement standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 </section>
-
-
-
 
 <!-- Portfolio Grid Gallary-->
 <section class="page-section bg-light" id="portfolio">

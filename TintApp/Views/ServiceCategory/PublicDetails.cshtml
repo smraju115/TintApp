@@ -7,6 +7,21 @@
     body {
         background-color: #f7f9fc;
     }
+
+    .feature-cards {
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .feature-cards img {
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
 </style>
 
 
@@ -16,17 +31,122 @@
         <h2 class="display-6 text-primary fw-bold border-bottom pb-2 d-inline-block">
             @Model.CategoryName
         </h2>
+        <h5>@Model.Title</h5>
     </div>
+
+    <!-- 🔸 Step 1: Static Feature Cards based on Category -->
+    @if (Model.CategoryName == "Tint")  // Vehicle Tinting
+    {
+        <div class="row justify-content-center g-4">
+            <!-- Card 1 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="p-3 border border-warning rounded-3 shadow-sm bg-white">
+                    <img src="/PublicDetailsTopDiv/1.jpg" class="img-fluid rounded mb-2" style="height: 100px; object-fit: cover;" alt="UV Ray Blockage">
+                    <p class="fw-bold m-0">UV Ray<br />Blockage</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="p-3 border border-warning rounded-3 shadow-sm bg-white">
+                    <img src="/PublicDetailsTopDiv/2.jpg" class="img-fluid rounded mb-2" style="height: 100px; object-fit: cover;" alt="Heat Rejection">
+                    <p class="fw-bold m-0">Heat<br />Rejection</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="p-3 border border-warning rounded-3 shadow-sm bg-white">
+                    <img src="/PublicDetailsTopDiv/3.jpg" class="img-fluid rounded mb-2" style="height: 100px; object-fit: cover;" alt="Shattered Glass Defense">
+                    <p class="fw-bold m-0">Shattered<br />Glass Defense</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="p-3 border border-warning rounded-3 shadow-sm bg-white">
+                    <img src="/PublicDetailsTopDiv/4.jpg" class="img-fluid rounded mb-2" style="height: 100px; object-fit: cover;" alt="JPJ-Approved Tint">
+                    <p class="fw-bold m-0">JPJ-Approved<br />Tint</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3 text-center">
+            <h3>Exceptional Optical Clarity & Superior Glare Reduction</h3>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="feature-cards">
+                    <img src="/PublicDetailsTopDiv/UpLower/1.jpg" class="img-fluid" />
+                    <h5 class="text-dark">Privacy Glass</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-cards">
+                    <img src="/PublicDetailsTopDiv/UpLower/2.jpg" class="img-fluid" />
+                    <h5 class="text-dark">UV Blockage</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-cards">
+                    <img src="/PublicDetailsTopDiv/UpLower/3.jpg" class="img-fluid" />
+                    <h5 class="text-dark">Energy Efficient</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-cards">
+                    <img src="/PublicDetailsTopDiv/UpLower/4.jpg" class="img-fluid" />
+                    <h5 class="text-dark">Energy Efficient</h5>
+                </div>
+            </div>
+        </div>
+
+    }
+    else if (Model.CategoryName == "") // Home Tinting
+    {
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="/images/home1.jpg" class="img-fluid" />
+                    <h5>Privacy Glass</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="/images/home2.jpg" class="img-fluid" />
+                    <h5>UV Blockage</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="/images/home3.jpg" class="img-fluid" />
+                    <h5>Energy Efficient</h5>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-muted text-center">No static design available for this category.</p>
+    }
+
 
     <!-- Service Item Details -->
     <div class="row bg-white rounded shadow p-4 align-items-center">
+        <h4 class="text-warning text-center">
+            Car Tinted Packages at affordable price
+        </h4>
         @foreach (var item in Model.Items)
         {
             <!-- Images -->
             <div class="row mb-4">
+                <div class="text-center">
+                    <h3 class="fw-bold text-dark">@item.ItemName</h3>
+                    <h4 class="text-success">৳@item.Price</h4>
+                </div>
+              
                 @foreach (var img in item.Images.Take(2)) // প্রথম দুইটা ইমেজ
                 {
                     <div class="col-md-6 mb-3">
+                        
                         <div class="position-relative overflow-hidden rounded-3">
                             <img src="@img.ImageUrl" alt="@item.ItemName" class="img-fluid rounded w-100" />
                         </div>
@@ -35,59 +155,14 @@
             </div>
 
             <!-- Details -->
-            <div class="col-md-12">
-                <h3 class="fw-bold text-dark">@item.ItemName</h3>
-                <h4 class="text-success">৳@item.Price</h4>
-
-                <p class="text-muted mt-3">@item.Description</p>
-
-                <!-- Rating Example -->
-                <div class="d-flex align-items-center mb-3">
-                    <span class="me-2 text-warning">★ ★ ★ ★ ☆</span>
-                    <small class="text-muted">4.2 (120 Reviews)</small>
-                </div>
-
+            <div class="col-md-12 text-center">
                 <!-- Book Button -->
                 <a asp-action="Create" asp-controller="Booking" asp-route-serviceItemId="@item.Id"
-                   class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4">Book Now</a>
+                   class="btn btn-primary px-4 rounded-pill shadow-sm mb-5">Book Now</a>
             </div>
         }
     </div>
-   @*  <div class="row bg-white rounded shadow p-4 align-items-center">
-        @foreach (var item in Model.Items)
-        {
-          
-
-            <!-- Image -->
-            <div class="col-md-6 mb-3 mb-md-0">
-                <div class="position-relative overflow-hidden rounded-3">
-                    <img src="@item.PictureUrl" alt="@item.ItemName" class="img-fluid rounded w-100">
-                </div>
-            </div>
-
-            <!-- Details -->
-            <div class="col-md-6">
-                <h3 class="fw-bold text-dark">@item.ItemName</h3>
-                <h4 class="text-success">৳@item.Price</h4>
-
-                <p class="text-muted mt-3">@item.Description</p>
-
-                <!-- Rating Example -->
-                <div class="d-flex align-items-center mb-3">
-                    <span class="me-2 text-warning">★ ★ ★ ★ ☆</span>
-                    <small class="text-muted">4.2 (120 Reviews)</small>
-                </div>
-
-                <!-- Book Button -->
-              
-                <a asp-action="Create" asp-controller="Booking" asp-route-serviceItemId="@item.Id" class="btn btn-primary mt-3 px-4 rounded-pill shadow-sm mb-4">Book Now</a>
-                
-                
-
-            </div>
-        }
-    </div> *@
-
+ 
 
 </div>
 

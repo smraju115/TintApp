@@ -26,45 +26,6 @@ namespace TintApp.Controllers
         }
 
 
-        //[HttpPost]
-        //public async Task<IActionResult> Create(ServiceItem model, IFormFile PictureFile)
-        //{
-        //    try
-        //    {
-        //        if (ModelState.IsValid)
-        //        {
-        //            model.Id = 0; // Make sure EF can auto-generate the ID
-
-        //            if (PictureFile != null)
-        //            {
-        //                string wwwRootPath = _env.WebRootPath;
-        //                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(PictureFile.FileName);
-        //                string path = Path.Combine(wwwRootPath, "uploads/item", fileName);
-
-        //                using (var stream = new FileStream(path, FileMode.Create))
-        //                {
-        //                    await PictureFile.CopyToAsync(stream);
-        //                }
-
-        //                model.PictureUrl = "/uploads/item/" + fileName;
-        //            }
-
-        //            _context.ServiceItems.Add(model);
-        //            await _context.SaveChangesAsync();
-        //            return RedirectToAction("Index", "ServiceCategory");
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ModelState.AddModelError("", "Something went wrong: " + ex.Message);
-        //    }
-
-
-        //    ViewBag.CategoryId = model.ServiceCategoryId;
-        //    return View(model);
-        //}
-
         [HttpPost]
         public async Task<IActionResult> Create(ServiceItem model, List<IFormFile> PictureFiles)
         {
