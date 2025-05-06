@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TintApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbdd93227b99c18834802b97915910e585ef379c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b08a40d4d7b339942cba4858de654d2be0ba5ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("TintApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TintApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

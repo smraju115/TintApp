@@ -10567,7 +10567,6 @@ p {
 }
 header.masthead {
   padding-top: 10.5rem;
-  padding-bottom: 6rem;
   text-align: center;
   color: #fff;
   background-image: url("../assets/img/Black-luxury-car.jpg");
@@ -10882,11 +10881,10 @@ header.masthead .masthead-heading {
 /*new Css*/
 #contact {
     background-color: #212529;
-    background-image: url("../assets/img/map-image.png");
+    background-image: url("../assets/img/Grid.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 100px 0;
     margin: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
