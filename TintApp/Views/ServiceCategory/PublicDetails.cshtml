@@ -318,16 +318,17 @@
 
     <!-- Service Item Details -->
     <div class="row bg-white rounded shadow p-4 align-items-center">
-        <h4 class="text-warning text-center">
+        @* <h4 class="text-warning text-center">
             Car Tinted Packages at affordable price
-        </h4>
+        </h4> *@
         @foreach (var item in Model.Items)
         {
             <!-- Images -->
             <div class="row mb-4">
                 <div class="text-center">
                     <h3 class="fw-bold text-dark">@item.ItemName</h3>
-                    <h4 class="text-success">৳@item.Price</h4>
+                    <h5 class="text-warning">@item.Description</h5>
+                    <h4 class="text-success">@item.Price RM</h4>
                 </div>
               
                 @foreach (var img in item.Images.Take(2)) // প্রথম দুইটা ইমেজ

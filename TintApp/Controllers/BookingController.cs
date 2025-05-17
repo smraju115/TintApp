@@ -12,11 +12,13 @@ using TintApp.Data;
 using TintApp.Models;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.RateLimiting;
 
 
 namespace TintApp.Controllers
 {
-    
+    //RateLimiter
+    [EnableRateLimiting("BookingLimiter")]
     public class BookingController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -66,7 +68,7 @@ namespace TintApp.Controllers
 
         // POST: Booking/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] //CSRF
         public async Task<IActionResult> Create(Booking booking)
         {
             if (ModelState.IsValid)

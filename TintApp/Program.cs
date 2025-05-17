@@ -4,6 +4,9 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using Newtonsoft.Json;
 using TintApp.Data;
 using TintApp.Models;
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.RateLimiting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +36,18 @@ builder.Services.ConfigureApplicationCookie(options =>
     
 });
 
+//Ratelimit
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("BookingLimiter", config =>
+    {
+        config.Window = TimeSpan.FromMinutes(1);
+        config.PermitLimit = 5; // Allow max 5 requests per minute
+        config.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        config.QueueLimit = 2;
+    });
+});
+
 var app = builder.Build();
 
 
@@ -56,6 +71,12 @@ using (var scope = app.Services.CreateScope())
     var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
     await SeedData.Initialize(services, userManager, roleManager);
 }
+
+//new add
+app.UseRateLimiter();
+app.UseHttpsRedirection();
+app.UseHsts();
+
 
 app.MapControllerRoute(
     name: "default",

@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "D:\\Unc works\\TintApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\servicecategory\\publicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\servicecategory\\publicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\booking\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\booking\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\serviceitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\serviceitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\servicecategory\\publicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\servicecategory\\publicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\admin\\_pendingbookingspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\admin\\_pendingbookingspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -31,20 +55,8 @@
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\servicecategory\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\serviceitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\serviceitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\servicecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\servicecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\models\\serviceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|d:\\unc works\\tintapp\\tintapp\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{AFFBB38B-BD03-4A45-8B63-B921170F2544}|TintApp\\TintApp.csproj|solutionrelative:tintapp\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -98,17 +106,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "TintApp\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "TintApp\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAD4CAAAAAAAAAAAAAL0CAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8CAAAAAAAAAAAuwL0CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-04T10:56:58.074Z",
               "IsPinned": true,
@@ -122,7 +130,7 @@
               "RelativeDocumentMoniker": "TintApp\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "TintApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-04T10:57:44.058Z",
               "IsPinned": true,
@@ -135,31 +143,110 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\Booking\\Create.cshtml",
+              "RelativeDocumentMoniker": "TintApp\\Views\\Booking\\Create.cshtml",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Booking\\Create.cshtml",
+              "RelativeToolTip": "TintApp\\Views\\Booking\\Create.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAI0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T10:08:37.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceItemController.cs",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\ServiceItemController.cs",
+              "RelativeDocumentMoniker": "TintApp\\Controllers\\ServiceItemController.cs",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\ServiceItemController.cs",
+              "RelativeToolTip": "TintApp\\Controllers\\ServiceItemController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T17:43:04.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PublicDetails.cshtml",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
+              "RelativeDocumentMoniker": "TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
+              "RelativeToolTip": "TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T16:36:32.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "TintApp\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "TintApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAIoAAAAAAAAAAIBZwIAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-04T12:07:32.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TintApp\\appsettings.json",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\appsettings.json",
+              "RelativeToolTip": "TintApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-05T03:55:23.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Program.cs",
               "RelativeDocumentMoniker": "TintApp\\Program.cs",
               "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Program.cs",
               "RelativeToolTip": "TintApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T11:46:04.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\Details.cshtml",
-              "RelativeDocumentMoniker": "TintApp\\Views\\ServiceCategory\\Details.cshtml",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\Details.cshtml",
-              "RelativeToolTip": "TintApp\\Views\\ServiceCategory\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T18:03:46.414Z"
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "TintApp\\Controllers\\BookingController.cs",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "TintApp\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwEcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T18:35:14.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TintApp\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TintApp\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwDsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T18:35:11.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ServiceImage.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Models\\ServiceImage.cs",
               "RelativeDocumentMoniker": "TintApp\\Models\\ServiceImage.cs",
@@ -167,71 +254,51 @@
               "RelativeToolTip": "TintApp\\Models\\ServiceImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:54:44.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "TintApp\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "TintApp\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:35:11.587Z"
+              "WhenOpened": "2025-05-04T17:54:44.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ServiceItemController.cs",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\ServiceItemController.cs",
-              "RelativeDocumentMoniker": "TintApp\\Controllers\\ServiceItemController.cs",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\ServiceItemController.cs",
-              "RelativeToolTip": "TintApp\\Controllers\\ServiceItemController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:43:04.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PublicDetails.cshtml",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
-              "RelativeDocumentMoniker": "TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
-              "RelativeToolTip": "TintApp\\Views\\ServiceCategory\\PublicDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPQAAAAFAAAAAAAAAA==",
+              "Title": "_PendingBookingsPartial.cshtml",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\Admin\\_PendingBookingsPartial.cshtml",
+              "RelativeDocumentMoniker": "TintApp\\Views\\Admin\\_PendingBookingsPartial.cshtml",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Admin\\_PendingBookingsPartial.cshtml",
+              "RelativeToolTip": "TintApp\\Views\\Admin\\_PendingBookingsPartial.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T16:36:32.271Z"
+              "WhenOpened": "2025-05-14T06:18:02.751Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "TintApp\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "TintApp\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAI0AAAAAAAAAAIBJwIAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-04T12:07:32.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\appsettings.json",
-              "RelativeDocumentMoniker": "TintApp\\appsettings.json",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\appsettings.json",
-              "RelativeToolTip": "TintApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-05T03:55:23.682Z"
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TintApp\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "TintApp\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T16:42:37.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\Details.cshtml",
+              "RelativeDocumentMoniker": "TintApp\\Views\\ServiceCategory\\Details.cshtml",
+              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\Details.cshtml",
+              "RelativeToolTip": "TintApp\\Views\\ServiceCategory\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T18:03:46.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "CategoryWithItemsVM.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\ViewModels\\CategoryWithItemsVM.cs",
               "RelativeDocumentMoniker": "TintApp\\ViewModels\\CategoryWithItemsVM.cs",
@@ -239,11 +306,12 @@
               "RelativeToolTip": "TintApp\\ViewModels\\CategoryWithItemsVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:04:11.307Z"
+              "WhenOpened": "2025-05-04T18:04:11.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ServiceCategoryController.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\ServiceCategoryController.cs",
               "RelativeDocumentMoniker": "TintApp\\Controllers\\ServiceCategoryController.cs",
@@ -251,11 +319,12 @@
               "RelativeToolTip": "TintApp\\Controllers\\ServiceCategoryController.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAUwGcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:06:52.653Z"
+              "WhenOpened": "2025-05-04T18:06:52.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ServiceCategory.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Models\\ServiceCategory.cs",
               "RelativeDocumentMoniker": "TintApp\\Models\\ServiceCategory.cs",
@@ -263,23 +332,12 @@
               "RelativeToolTip": "TintApp\\Models\\ServiceCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:06:49.334Z"
+              "WhenOpened": "2025-05-04T18:06:49.334Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "TintApp\\Controllers\\BookingController.cs",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "TintApp\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:35:14.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "TintApp\\Controllers\\AccountController.cs",
@@ -287,11 +345,12 @@
               "RelativeToolTip": "TintApp\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T18:35:05.764Z"
+              "WhenOpened": "2025-05-04T18:35:05.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceItem\\Create.cshtml",
               "RelativeDocumentMoniker": "TintApp\\Views\\ServiceItem\\Create.cshtml",
@@ -299,23 +358,25 @@
               "RelativeToolTip": "TintApp\\Views\\ServiceItem\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T17:44:08.917Z"
+              "WhenOpened": "2025-05-04T17:44:08.917Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ServiceItem.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Models\\ServiceItem.cs",
               "RelativeDocumentMoniker": "TintApp\\Models\\ServiceItem.cs",
               "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Models\\ServiceItem.cs",
               "RelativeToolTip": "TintApp\\Models\\ServiceItem.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA3wB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:43:55.805Z"
+              "WhenOpened": "2025-05-04T17:43:55.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\ServiceCategory\\Index.cshtml",
               "RelativeDocumentMoniker": "TintApp\\Views\\ServiceCategory\\Index.cshtml",
@@ -323,11 +384,12 @@
               "RelativeToolTip": "TintApp\\Views\\ServiceCategory\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T16:41:36.616Z"
+              "WhenOpened": "2025-05-04T16:41:36.616Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "TintApp\\Data\\ApplicationDbContext.cs",
@@ -335,23 +397,12 @@
               "RelativeToolTip": "TintApp\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:55:32.371Z"
+              "WhenOpened": "2025-05-04T17:55:32.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "TintApp\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\Unc works\\TintApp\\TintApp\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "TintApp\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T16:42:37.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "styles.css",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\css\\styles.css",
               "RelativeDocumentMoniker": "TintApp\\wwwroot\\css\\styles.css",
@@ -359,11 +410,12 @@
               "RelativeToolTip": "TintApp\\wwwroot\\css\\styles.css",
               "ViewState": "AgIAAHMqAAAAAAAAAAAwwHMqAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-04T11:03:28.524Z"
+              "WhenOpened": "2025-05-04T11:03:28.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Unc works\\TintApp\\TintApp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "TintApp\\Controllers\\HomeController.cs",
@@ -371,7 +423,8 @@
               "RelativeToolTip": "TintApp\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T10:56:50.906Z"
+              "WhenOpened": "2025-05-04T10:56:50.906Z",
+              "EditorCaption": ""
             }
           ]
         }
