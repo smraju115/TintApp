@@ -138,17 +138,17 @@ namespace TintApp.Controllers
                 document.Open();
 
                 // Logo image
-                string logoPath = Path.Combine(webRootPath, "images", "logo.png"); // তুমি logo.png ওয়েব root-এর images ফোল্ডারে রাখবা
+                string logoPath = Path.Combine(webRootPath, "Logo", "Logo.png"); // Put logo.png wwwroot/ images folder
                 if (System.IO.File.Exists(logoPath))
                 {
                     var logo = Image.GetInstance(logoPath);
-                    logo.ScaleAbsolute(80f, 80f); // লোগোর সাইজ
+                    logo.ScaleAbsolute(80f, 80f); // logo size
                     logo.Alignment = Image.ALIGN_LEFT;
                     document.Add(logo);
                 }
 
                 // Company Name
-                var companyName = new Paragraph("Tint ML", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 20f, iTextSharp.text.Font.BOLD));
+                var companyName = new Paragraph("KL TINT GALLERY ", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 20f, iTextSharp.text.Font.BOLD));
                 companyName.Alignment = Element.ALIGN_CENTER;
                 document.Add(companyName);
 
@@ -223,7 +223,7 @@ namespace TintApp.Controllers
                 document.Add(signLine);
 
                 // Signature Image
-                string signPath = Path.Combine(webRootPath, "images", "signature.png"); // তোমার সিগনেচার ইমেজ এখানে থাকবে
+                string signPath = Path.Combine(webRootPath, "images", "signature.png"); // Your Signature 
                 if (System.IO.File.Exists(signPath))
                 {
                     var signImage = Image.GetInstance(signPath);

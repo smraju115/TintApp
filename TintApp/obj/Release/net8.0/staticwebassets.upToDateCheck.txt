@@ -2117,7 +2117,6 @@ wwwroot\bootstrap-icons\icons\zoom-in.svg
 wwwroot\bootstrap-icons\icons\zoom-out.svg
 wwwroot\css\site.css
 wwwroot\css\styles.css
-wwwroot\favicon.ico
 wwwroot\images\logo.png
 wwwroot\images\signature.png
 wwwroot\JPJ\2.jpg
@@ -2188,6 +2187,8 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\Logo\favicon.ico
+wwwroot\Logo\Logo.png
 wwwroot\pdfs\16CDE056.pdf
 wwwroot\pdfs\1B797288.pdf
 wwwroot\pdfs\2F36C412.pdf
@@ -2208,6 +2209,7 @@ wwwroot\pdfs\TN0011.pdf
 wwwroot\pdfs\TN0012.pdf
 wwwroot\pdfs\TN0013.pdf
 wwwroot\pdfs\TN0014.pdf
+wwwroot\pdfs\TN0015.pdf
 wwwroot\PublicDetailsTopDiv\1.jpg
 wwwroot\PublicDetailsTopDiv\2.jpg
 wwwroot\PublicDetailsTopDiv\3.jpg
@@ -2225,13 +2227,21 @@ wwwroot\uploads\category\aff12d69-9023-4189-9cee-9200cf2c387c.jpg
 wwwroot\uploads\item\0335bd6a-9ef0-4680-9b88-07551b631b4f.jpg
 wwwroot\uploads\item\0798fb40-d26d-4a41-bd7e-0ab135160c78.jpg
 wwwroot\uploads\item\0acfb4e8-0db3-47a2-b5c8-2ed4bd688d66.jpg
+wwwroot\uploads\item\10915039-9985-4df5-8abb-34fc842ba579.jpeg
+wwwroot\uploads\item\32fcd97d-54c5-4faa-aca5-5b92a0f0264d.jpeg
+wwwroot\uploads\item\3626e756-5494-4ece-aac1-d239a34f8278.jpg
 wwwroot\uploads\item\428925d6-cbe3-4447-a658-35f8b09a3478.jpg
 wwwroot\uploads\item\43d51a55-b925-4342-a1f1-08a6287ae705.jpg
+wwwroot\uploads\item\4601357b-83e9-4c90-86dd-8c1564f1a0e6.jpg
+wwwroot\uploads\item\4cc08126-0517-4546-851f-30c69133fcd2.jpeg
 wwwroot\uploads\item\4fbeb02a-7438-45b7-b113-2d2cf223ba9b.jpg
+wwwroot\uploads\item\66086b2a-cf98-40c8-a5ca-a5af0ab0980c.jpg
 wwwroot\uploads\item\73095c2f-a34d-460e-8c66-f89fb3a8446f.jpg
+wwwroot\uploads\item\7981224e-1c65-409d-8524-8c4a73d43e78.jpeg
 wwwroot\uploads\item\79b8f007-564e-4169-b624-41d297cd0a46.jpg
 wwwroot\uploads\item\82f66342-7fd8-43ee-b099-4f1a50c0623b.jpg
 wwwroot\uploads\item\b5aadce2-7572-4ef3-9462-6de8b8490df6.jpg
 wwwroot\uploads\item\c524748e-9ade-4990-a231-82e611804140.jpg
+wwwroot\uploads\item\ca2c1e82-e7e2-4f44-a9c9-1bbcdc6ae752.jpg
 wwwroot\uploads\item\d9fbf113-0ce1-49c0-a427-c343687f3f03.jpg
 wwwroot\uploads\item\e42821a4-897f-45ca-a0a1-060186a69c7e.jpg

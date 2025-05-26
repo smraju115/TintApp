@@ -1,11 +1,11 @@
 ﻿@model Booking
 
 @{
-    ViewData["Title"] = "Create Booking";
-    ViewBag.PagePaddingClass = "p-5 m-5";
+    ViewData["Title"] = "Booking";
+    ViewBag.PagePaddingClass = "p-2 mt-5";
 }
 
-<div class="row">
+<div class="row mt-5">
     <div class="col-12">
         <form asp-action="Create" method="post">
             @Html.AntiForgeryToken() @* //CSRF *@

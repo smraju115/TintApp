@@ -41,6 +41,14 @@
       "PackagePath": "staticwebassets\\JPJ\\RulesJPJTint.jpeg"
     },
     {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\Logo\\Logo.png",
+      "PackagePath": "staticwebassets\\Logo\\Logo.png"
+    },
+    {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\Logo\\favicon.ico",
+      "PackagePath": "staticwebassets\\Logo\\favicon.ico"
+    },
+    {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\PublicDetailsTopDiv\\1.jpg",
       "PackagePath": "staticwebassets\\PublicDetailsTopDiv\\1.jpg"
     },
@@ -8549,10 +8557,6 @@
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
@@ -8875,6 +8879,10 @@
     {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\pdfs\\TN0014.pdf",
       "PackagePath": "staticwebassets\\pdfs\\TN0014.pdf"
+    },
+    {
+      "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\pdfs\\TN0015.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\TN0015.pdf"
     },
     {
       "Id": "D:\\Unc works\\TintApp\\TintApp\\wwwroot\\sppiners\\1.gif",

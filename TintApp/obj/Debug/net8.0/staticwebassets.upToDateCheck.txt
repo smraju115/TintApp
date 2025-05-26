@@ -2117,7 +2117,6 @@ wwwroot\bootstrap-icons\icons\zoom-in.svg
 wwwroot\bootstrap-icons\icons\zoom-out.svg
 wwwroot\css\site.css
 wwwroot\css\styles.css
-wwwroot\favicon.ico
 wwwroot\images\logo.png
 wwwroot\images\signature.png
 wwwroot\JPJ\2.jpg
@@ -2188,6 +2187,8 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\Logo\favicon.ico
+wwwroot\Logo\Logo.png
 wwwroot\pdfs\16CDE056.pdf
 wwwroot\pdfs\1B797288.pdf
 wwwroot\pdfs\2F36C412.pdf
@@ -2208,6 +2209,7 @@ wwwroot\pdfs\TN0011.pdf
 wwwroot\pdfs\TN0012.pdf
 wwwroot\pdfs\TN0013.pdf
 wwwroot\pdfs\TN0014.pdf
+wwwroot\pdfs\TN0015.pdf
 wwwroot\PublicDetailsTopDiv\1.jpg
 wwwroot\PublicDetailsTopDiv\2.jpg
 wwwroot\PublicDetailsTopDiv\3.jpg
