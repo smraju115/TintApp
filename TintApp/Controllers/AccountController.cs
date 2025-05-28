@@ -59,11 +59,20 @@ namespace TintApp.Controllers
 
                     if (result.Succeeded)
                     {
-                        //TempData["SuccessMessage"] = "Login successful! Welcome, " + user.UserName + "!";
+                        TempData["SuccessMessage"] = "Login successful! Welcome";
+
+                        // Check if user is in Admin role
+                        if (await _userManager.IsInRoleAsync(user, "Admin"))
+                        {
+                            return RedirectToAction("AdminDashboard", "Admin"); // 
+                        }
+                        //Normal user redirection
                         if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                         {
                             return Redirect(returnUrl);
                         }
+                       
+                        
                         else
                         {
                             return RedirectToAction("Index", "Home");

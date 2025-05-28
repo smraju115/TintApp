@@ -1,0 +1,46 @@
+﻿/* Sidebar Styling */
+#sidebar {
+    width: 250px;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+    #sidebar.sidebar-collapsed {
+        width: 70px;
+    }
+
+        #sidebar.sidebar-collapsed .sidebar-text {
+            display: none;
+        }
+
+    #sidebar .nav-item {
+        white-space: nowrap;
+        padding: 10px 15px;
+    }
+
+        #sidebar .nav-item i {
+            font-size: 1.2rem;
+        }
+
+/* Content area beside sidebar */
+#content-area {
+    margin-left: 250px;
+    transition: all 0.3s ease;
+    width: calc(100% - 250px);
+}
+
+.sidebar-collapsed ~ #content-area {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* Footer at bottom */
+footer.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

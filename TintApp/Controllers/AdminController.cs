@@ -13,6 +13,12 @@ namespace TintApp.Controllers
         {
             _context = context;
         }
+
+        public IActionResult AdminDashboard()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Bookings()
         {
             return View();
